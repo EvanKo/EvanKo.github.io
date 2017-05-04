@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://evankoo.obstacle.cn/2017/04/30/部署laravel项目遇到的问题/index.html">
 <meta property="og:site_name" content="EvanKoo">
 <meta property="og:description" content="虽然大概知道部署流程，但是今天部署laravel项目遇到的一些小问题耗了一点时间，记录下来。">
-<meta property="og:updated_time" content="2017-04-30T15:22:32.411Z">
+<meta property="og:updated_time" content="2017-05-04T07:43:44.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="部署laravel项目遇到的问题">
 <meta name="twitter:description" content="虽然大概知道部署流程，但是今天部署laravel项目遇到的一些小问题耗了一点时间，记录下来。">
@@ -383,8 +383,8 @@
       
         <h3 id="nginx配置问题"><a href="#nginx配置问题" class="headerlink" title="nginx配置问题"></a>nginx配置问题</h3><p>在/etc/nginx/site-avaliable/defaut配置文件中，更改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">server_name xxx;</div><div class="line">root xxx/public;</div><div class="line">index xxx index.php;</div><div class="line"></div><div class="line">#在location ~ ./php$添加</div><div class="line"># # With php7.0-fpm:</div><div class="line"> fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</div><div class="line"> fastcgi_pass unix:/run/php/php7.0-fpm.sock;</div><div class="line"> fastcgi_index index.php;</div><div class="line"> include fastcgi_params;</div></pre></td></tr></table></figure></p>
 <p>后，访问项目是404, 接着查了一下，发现index.php 要放在第一位。</p>
-<p>但是更改后，还是404。继续找问题，发现:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">	try_files $url $url/ =404;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>更改为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">	try_files $url $url/ /index.php?$query_string;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>但是更改后，还是404。继续找问题，发现:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">	try_files $uri $uri/ =404;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>更改为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">	try_files $uri $uri/ /index.php?$query_string;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>好了，没报404了，但是报了500。继续找问题，看一下是不是项目权限没配置好<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chmod -R 777 /path/to/your/program/public</div></pre></td></tr></table></figure></p>
 <p>还是不行，最后:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R www-data:www-data xxx</div></pre></td></tr></table></figure></p>
 <p>最后成功访问到laravel写的接口。</p>
