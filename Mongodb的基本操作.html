@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://evankoo.obstacle.cn/Mongodb的基本操作.html">
 <meta property="og:site_name" content="Evan Koo">
 <meta property="og:description" content="0.写在前面近年来后端nodejs+MongoDB的搭配好像比世界上最好的语言PHP+MySQL要火得多。虽然我node不怎么行，但是MongoDB还是要学一下的，PHP也能搭MongoDB。不过MySQL 5.7新特性终于支持json了，好像也还行，多一种选择。">
-<meta property="og:updated_time" content="2017-10-08T13:42:16.952Z">
+<meta property="og:updated_time" content="2017-10-08T13:44:54.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mongodb的基本操作">
 <meta name="twitter:description" content="0.写在前面近年来后端nodejs+MongoDB的搭配好像比世界上最好的语言PHP+MySQL要火得多。虽然我node不怎么行，但是MongoDB还是要学一下的，PHP也能搭MongoDB。不过MySQL 5.7新特性终于支持json了，好像也还行，多一种选择。">
@@ -440,7 +440,7 @@
 <h3 id="save"><a href="#save" class="headerlink" title="save"></a>save</h3><p>save和update不同，会直接替换全部数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">db.collection.save(</div><div class="line">   &lt;document&gt;, // 数据</div><div class="line">   &#123;</div><div class="line">     writeConcern: &lt;document&gt;</div><div class="line">   &#125;</div><div class="line">)</div></pre></td></tr></table></figure></p>
 <h2 id="备份与恢复"><a href="#备份与恢复" class="headerlink" title="备份与恢复"></a>备份与恢复</h2><p>语法也跟MySQL差不多，不指定数据库的话会直接备份全部。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mongodump -h dbhost -d dbname -o dbdirectory       // 备份</div><div class="line">mongorestore -h &lt;hostname&gt;&lt;:port&gt; -d dbname &lt;path&gt; // 恢复</div></pre></td></tr></table></figure></p>
 <p>最基本的用法就是上面这些啦，Nodejs有个扩展<a href="http://mongoosejs.com/docs/api.html" target="_blank" rel="external">Mongoose</a>，效率比较高，相比Nodejs-mongodb扩展不用频繁open和close连接</p>
-<p>参考文档<a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="external">菜鸟教程-MongoDB</a></p>
+<p>参考文档:<a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="external">菜鸟教程-MongoDB</a></p>
 
       
     </div>
