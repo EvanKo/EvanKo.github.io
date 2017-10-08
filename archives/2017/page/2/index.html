@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Nginx," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -90,17 +90,15 @@
 
 
 
-<meta name="description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
-<meta name="keywords" content="Nginx">
-<meta property="og:type" content="article">
-<meta property="og:title" content="服务器多网站部署">
-<meta property="og:url" content="http://evankoo.obstacle.cn/服务器多网站部署.html">
+<meta name="description" content="step by step">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Evan Koo">
+<meta property="og:url" content="http://evankoo.obstacle.cn/archives/2017/page/2/index.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
-<meta property="og:updated_time" content="2017-10-08T09:29:36.941Z">
+<meta property="og:description" content="step by step">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="服务器多网站部署">
-<meta name="twitter:description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
+<meta name="twitter:title" content="Evan Koo">
+<meta name="twitter:description" content="step by step">
 
 
 
@@ -128,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://evankoo.obstacle.cn/服务器多网站部署.html"/>
+  <link rel="canonical" href="http://evankoo.obstacle.cn/archives/2017/page/2/"/>
 
 
 
 
 
-  <title>服务器多网站部署 | Evan Koo</title>
+  <title>归档 | Evan Koo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -169,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -263,215 +261,70 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/服务器多网站部署.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Evan Koo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oox5stmf1.bkt.clouddn.com/1245922695.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Evan Koo">
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 11 篇日志。 继续努力。
     </span>
 
     
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                服务器多网站部署
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-01T12:32:45+08:00">
-                2017-10-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Nginx/" itemprop="url" rel="index">
-                    <span itemprop="name">Nginx</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/服务器多网站部署.html#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="服务器多网站部署.html" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-             <span id="/服务器多网站部署.html" class="leancloud_visitors" data-flag-title="服务器多网站部署">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
 
       
       
-
       
-        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。</p>
-<p>我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。<br><a id="more"></a></p>
-<h1 id="1-什么是反向代理？"><a href="#1-什么是反向代理？" class="headerlink" title="1. 什么是反向代理？"></a>1. 什么是反向代理？</h1><p>简单来说，就是<strong>转发请求</strong>。</p>
-<p>将该域名80端口的请求转发到另外一个端口上，就能实现多个域名”占用了一个端口”，直接输入域名即可，不再需要端口号。</p>
-<h1 id="2-nginx配置示例"><a href="#2-nginx配置示例" class="headerlink" title="2. nginx配置示例"></a>2. nginx配置示例</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen 80;          </div><div class="line">        server_name domain_name;</div><div class="line"></div><div class="line">        location / &#123; </div><div class="line">                proxy_pass http://localhost:8996; </div><div class="line">                proxy_set_header Host $host:$server_port;</div><div class="line">                proxy_set_header X-Real-IP $remote_addr;</div><div class="line">                proxy_set_header REMOTE-HOST $remote_addr;</div><div class="line">                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</div><div class="line">        &#125;   </div><div class="line"># 转发到此端口</div><div class="line">server &#123;</div><div class="line">        listen 8996;    </div><div class="line"></div><div class="line">        root /var/www/activity;</div><div class="line">        index index.php index.html;</div><div class="line">        # Make site accessible from http://localhost/</div><div class="line">        server_name localhost;  </div><div class="line">        // other conf</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-<h1 id="附语法"><a href="#附语法" class="headerlink" title="附语法"></a>附语法</h1><blockquote>
-<p>语法规则：<br>location [=|~|~*|^~] /uri/ { … } <br></p>
-<ul>
-<li>=   开头表示精确匹配  <br></li>
-<li>^~  开头表示uri以某个常规字符串开头，理解为匹配 url路径即可。nginx不对url做编码，因此请求为/static/20%/aa，可以被规则^~ /static/ /aa匹配到(注意是空格)。 <br></li>
-<li>~   开头表示区分大小写的正则匹配  <br></li>
-<li>~*  开头表示不区分大小写的正则匹配  <br></li>
-<li>!~ !~* 分别为区分大小写不匹配及不区分大小写不匹配的正则 <br></li>
-<li>/  通用匹配，任何请求都会匹配到。 <br></li>
-</ul>
-</blockquote>
-<p>首先匹配 =，其次匹配^~, 其次是按文件中顺序的正则匹配，最后是交给 / 通用匹配。当有匹配成功时候，停止匹配，按当前匹配规则处理请求。</p>
 
-      
-    </div>
-
-    <div>
       
         
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
-          
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
       
+      
 
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
         
-      
+            <a class="post-title-link" href="/个人域名解析hexo博客.html" itemprop="url">
+              
+                <span itemprop="name">个人域名解析hexo博客</span>
+              
+            </a>
+        
+      </h2>
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-04-24T22:19:16+08:00"
+              content="2017-04-24" >
+          04-24
+        </time>
+      </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/MySQL锁.html" rel="prev" title="MySQL锁">
-                MySQL锁 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+    
+
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/archives/2017/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
 
 
           </div>
@@ -479,12 +332,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div id="SOHUCS"></div>
-    
-  </div>
-
 
         </div>
         
@@ -504,17 +351,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://oox5stmf1.bkt.clouddn.com/1245922695.jpg"
@@ -605,22 +443,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-text">0. 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-什么是反向代理？"><span class="nav-text">1. 什么是反向代理？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-nginx配置示例"><span class="nav-text">2. nginx配置示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附语法"><span class="nav-text">附语法</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -761,9 +583,11 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   

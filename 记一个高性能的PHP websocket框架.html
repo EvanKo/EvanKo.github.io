@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Nginx," />
+  <meta name="keywords" content="PHP," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
-<meta name="keywords" content="Nginx">
+<meta name="description" content="它的名字叫PHPworkerman～～我用它来做了计算机网络的课设。 websocket WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。  那么通过websocket来做一个web聊天室不要太简单。 表面上客户端1向客户端2发送消息，实际经过了服务端的转发。 workerman使用workerma">
+<meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="服务器多网站部署">
-<meta property="og:url" content="http://evankoo.obstacle.cn/服务器多网站部署.html">
+<meta property="og:title" content="记一个高性能的PHP websocket框架">
+<meta property="og:url" content="http://evankoo.obstacle.cn/记一个高性能的PHP websocket框架.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
-<meta property="og:updated_time" content="2017-10-08T09:29:36.941Z">
+<meta property="og:description" content="它的名字叫PHPworkerman～～我用它来做了计算机网络的课设。 websocket WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。  那么通过websocket来做一个web聊天室不要太简单。 表面上客户端1向客户端2发送消息，实际经过了服务端的转发。 workerman使用workerma">
+<meta property="og:updated_time" content="2017-10-08T10:02:49.593Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="服务器多网站部署">
-<meta name="twitter:description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
+<meta name="twitter:title" content="记一个高性能的PHP websocket框架">
+<meta name="twitter:description" content="它的名字叫PHPworkerman～～我用它来做了计算机网络的课设。 websocket WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。  那么通过websocket来做一个web聊天室不要太简单。 表面上客户端1向客户端2发送消息，实际经过了服务端的转发。 workerman使用workerma">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://evankoo.obstacle.cn/服务器多网站部署.html"/>
+  <link rel="canonical" href="http://evankoo.obstacle.cn/记一个高性能的PHP websocket框架.html"/>
 
 
 
 
 
-  <title>服务器多网站部署 | Evan Koo</title>
+  <title>记一个高性能的PHP websocket框架 | Evan Koo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +273,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/服务器多网站部署.html">
+    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/记一个高性能的PHP websocket框架.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evan Koo">
@@ -294,7 +294,7 @@
             
             
               
-                服务器多网站部署
+                记一个高性能的PHP websocket框架
               
             
           </h2>
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-01T12:32:45+08:00">
-                2017-10-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T23:09:24+08:00">
+                2017-06-25
               </time>
             
 
@@ -332,8 +332,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Nginx/" itemprop="url" rel="index">
-                    <span itemprop="name">Nginx</span>
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
                   </a>
                 </span>
 
@@ -351,8 +351,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/服务器多网站部署.html#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="服务器多网站部署.html" itemprop="commentsCount"></span>
+                <a href="/记一个高性能的PHP websocket框架.html#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="记一个高性能的PHP websocket框架.html" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -360,7 +360,7 @@
 
           
           
-             <span id="/服务器多网站部署.html" class="leancloud_visitors" data-flag-title="服务器多网站部署">
+             <span id="/记一个高性能的PHP websocket框架.html" class="leancloud_visitors" data-flag-title="记一个高性能的PHP websocket框架">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -388,23 +388,20 @@
       
 
       
-        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。</p>
-<p>我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。<br><a id="more"></a></p>
-<h1 id="1-什么是反向代理？"><a href="#1-什么是反向代理？" class="headerlink" title="1. 什么是反向代理？"></a>1. 什么是反向代理？</h1><p>简单来说，就是<strong>转发请求</strong>。</p>
-<p>将该域名80端口的请求转发到另外一个端口上，就能实现多个域名”占用了一个端口”，直接输入域名即可，不再需要端口号。</p>
-<h1 id="2-nginx配置示例"><a href="#2-nginx配置示例" class="headerlink" title="2. nginx配置示例"></a>2. nginx配置示例</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen 80;          </div><div class="line">        server_name domain_name;</div><div class="line"></div><div class="line">        location / &#123; </div><div class="line">                proxy_pass http://localhost:8996; </div><div class="line">                proxy_set_header Host $host:$server_port;</div><div class="line">                proxy_set_header X-Real-IP $remote_addr;</div><div class="line">                proxy_set_header REMOTE-HOST $remote_addr;</div><div class="line">                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</div><div class="line">        &#125;   </div><div class="line"># 转发到此端口</div><div class="line">server &#123;</div><div class="line">        listen 8996;    </div><div class="line"></div><div class="line">        root /var/www/activity;</div><div class="line">        index index.php index.html;</div><div class="line">        # Make site accessible from http://localhost/</div><div class="line">        server_name localhost;  </div><div class="line">        // other conf</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-<h1 id="附语法"><a href="#附语法" class="headerlink" title="附语法"></a>附语法</h1><blockquote>
-<p>语法规则：<br>location [=|~|~*|^~] /uri/ { … } <br></p>
-<ul>
-<li>=   开头表示精确匹配  <br></li>
-<li>^~  开头表示uri以某个常规字符串开头，理解为匹配 url路径即可。nginx不对url做编码，因此请求为/static/20%/aa，可以被规则^~ /static/ /aa匹配到(注意是空格)。 <br></li>
-<li>~   开头表示区分大小写的正则匹配  <br></li>
-<li>~*  开头表示不区分大小写的正则匹配  <br></li>
-<li>!~ !~* 分别为区分大小写不匹配及不区分大小写不匹配的正则 <br></li>
-<li>/  通用匹配，任何请求都会匹配到。 <br></li>
-</ul>
+        <p>它的名字叫<a href="http://www.workerman.net" target="_blank" rel="external">PHPworkerman</a>～～我用它来做了计算机网络的课设。</p>
+<h1 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h1><blockquote>
+<p>WebSocket协议是基于TCP的一种新的网络协议。它实现了浏览器与服务器全双工(full-duplex)通信——允许服务器主动发送信息给客户端。</p>
 </blockquote>
-<p>首先匹配 =，其次匹配^~, 其次是按文件中顺序的正则匹配，最后是交给 / 通用匹配。当有匹配成功时候，停止匹配，按当前匹配规则处理请求。</p>
+<p>那么通过websocket来做一个web聊天室不要太简单。</p>
+<p>表面上客户端1向客户端2发送消息，实际经过了服务端的转发。</p>
+<h1 id="workerman"><a href="#workerman" class="headerlink" title="workerman"></a>workerman</h1><p>使用workerman这个框架不需要我们去管什么三次握手、数据编码解码<a href="#why">[?]</a>，直接使用它封装的三大函数<strong>onConnect、onMessage、onClose</strong>，更重要的是它的守护进程，不用担心进程挂了业务瘫痪。但是要注意的是服务器如果重启，该进程没有加入自启动的话，是不会自动化启动的。</p>
+<h2 id="onConnect"><a href="#onConnect" class="headerlink" title="onConnect"></a>onConnect</h2><p>在客户端连接上服务器时执行的函数，通常在这个地方回应客户端连接成功的信息</p>
+<h2 id="onMessage"><a href="#onMessage" class="headerlink" title="onMessage"></a>onMessage</h2><p>服务的主要逻辑区域，消息可用type区分，即可处理不同的需求。</p>
+<h2 id="onClose"><a href="#onClose" class="headerlink" title="onClose"></a>onClose</h2><p>客户端关闭连接时触发的函数。</p>
+<p>以wokerman为基础的Gatewayworker，使用起来更加方便，但是workerman更加个性化。</p>
+<h1 id="参考手册"><a href="#参考手册" class="headerlink" title="参考手册"></a>参考手册</h1><p><a href="http://doc.workerman.net" target="_blank" rel="external">workerman</a><br><a href="http://doc2.workerman.net/326102" target="_blank" rel="external">Gatewayworker</a></p>
+<hr>
+<p><span id="why">[?]socket通讯数据都需要编码、解码，但是php封装了此类函数，我们用起来也不会那么麻烦了</span></p>
 
       
     </div>
@@ -434,7 +431,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
           
         </div>
       
@@ -447,14 +444,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/Linux常用指令(一).html" rel="next" title="Linux/Ubuntu常用指令(一)">
+                <i class="fa fa-chevron-left"></i> Linux/Ubuntu常用指令(一)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/MySQL锁.html" rel="prev" title="MySQL锁">
-                MySQL锁 <i class="fa fa-chevron-right"></i>
+              <a href="/laravel-admin快速搭建后台管理系统.html" rel="prev" title="laravel-admin快速搭建后台管理系统">
+                laravel-admin快速搭建后台管理系统 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -615,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-text">0. 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-什么是反向代理？"><span class="nav-text">1. 什么是反向代理？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-nginx配置示例"><span class="nav-text">2. nginx配置示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附语法"><span class="nav-text">附语法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#websocket"><span class="nav-text">websocket</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#workerman"><span class="nav-text">workerman</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#onConnect"><span class="nav-text">onConnect</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#onMessage"><span class="nav-text">onMessage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#onClose"><span class="nav-text">onClose</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考手册"><span class="nav-text">参考手册</span></a></li></ol></div>
             
 
           </div>
