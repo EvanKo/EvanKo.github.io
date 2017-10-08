@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="laravel," />
+  <meta name="keywords" content="laravel,MySQL," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="当我们对前端的知识不够了解的时候，做一个laravel后台管理系统的页面是比较费劲。你可以去download一些模板，但是很多时候都需要自己大量修改视图文件，这样子的效率会比较低下。 最近接触了一款高效搭建后台管理系统的扩展laravel-admin，能够帮你在短时间内搭建起简单的管理系统。">
-<meta name="keywords" content="laravel">
+<meta name="description" content="1. 主键什么是主键？主键其实是唯一性索引的一种，我们使用Laravel时，通常会在表里加一个自增的id，默认表中的id为主键。 属性：唯一、不为空。 2. 外键什么是外键？表的外键是另一表的主键, 外键可以有重复的, 可以是空值。多表关联时，我们常用外键与主表建立联系，这样在删除数据时就可以不用从代码上关联删除记录，MySQL会自动删除从表记录。当然这需要在创建表时设计好外键约束。">
+<meta name="keywords" content="laravel,MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="laravel-admin快速搭建后台管理系统">
-<meta property="og:url" content="http://evankoo.obstacle.cn/laravel-admin快速搭建后台管理系统.html">
+<meta property="og:title" content="MySQL主键、外键和索引">
+<meta property="og:url" content="http://evankoo.obstacle.cn/MySQL主键、外键和索引.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="当我们对前端的知识不够了解的时候，做一个laravel后台管理系统的页面是比较费劲。你可以去download一些模板，但是很多时候都需要自己大量修改视图文件，这样子的效率会比较低下。 最近接触了一款高效搭建后台管理系统的扩展laravel-admin，能够帮你在短时间内搭建起简单的管理系统。">
-<meta property="og:updated_time" content="2017-10-08T08:50:43.782Z">
+<meta property="og:description" content="1. 主键什么是主键？主键其实是唯一性索引的一种，我们使用Laravel时，通常会在表里加一个自增的id，默认表中的id为主键。 属性：唯一、不为空。 2. 外键什么是外键？表的外键是另一表的主键, 外键可以有重复的, 可以是空值。多表关联时，我们常用外键与主表建立联系，这样在删除数据时就可以不用从代码上关联删除记录，MySQL会自动删除从表记录。当然这需要在创建表时设计好外键约束。">
+<meta property="og:updated_time" content="2017-10-08T08:49:03.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="laravel-admin快速搭建后台管理系统">
-<meta name="twitter:description" content="当我们对前端的知识不够了解的时候，做一个laravel后台管理系统的页面是比较费劲。你可以去download一些模板，但是很多时候都需要自己大量修改视图文件，这样子的效率会比较低下。 最近接触了一款高效搭建后台管理系统的扩展laravel-admin，能够帮你在短时间内搭建起简单的管理系统。">
+<meta name="twitter:title" content="MySQL主键、外键和索引">
+<meta name="twitter:description" content="1. 主键什么是主键？主键其实是唯一性索引的一种，我们使用Laravel时，通常会在表里加一个自增的id，默认表中的id为主键。 属性：唯一、不为空。 2. 外键什么是外键？表的外键是另一表的主键, 外键可以有重复的, 可以是空值。多表关联时，我们常用外键与主表建立联系，这样在删除数据时就可以不用从代码上关联删除记录，MySQL会自动删除从表记录。当然这需要在创建表时设计好外键约束。">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://evankoo.obstacle.cn/laravel-admin快速搭建后台管理系统.html"/>
+  <link rel="canonical" href="http://evankoo.obstacle.cn/MySQL主键、外键和索引.html"/>
 
 
 
 
 
-  <title>laravel-admin快速搭建后台管理系统 | Evan Koo</title>
+  <title>MySQL主键、外键和索引 | Evan Koo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +273,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/laravel-admin快速搭建后台管理系统.html">
+    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/MySQL主键、外键和索引.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evan Koo">
@@ -294,7 +294,7 @@
             
             
               
-                laravel-admin快速搭建后台管理系统
+                MySQL主键、外键和索引
               
             
           </h2>
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T21:37:31+08:00">
-                2017-05-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T09:09:26+08:00">
+                2017-09-16
               </time>
             
 
@@ -332,8 +332,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/laravel/" itemprop="url" rel="index">
-                    <span itemprop="name">laravel</span>
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
                   </a>
                 </span>
 
@@ -351,8 +351,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/laravel-admin快速搭建后台管理系统.html#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="laravel-admin快速搭建后台管理系统.html" itemprop="commentsCount"></span>
+                <a href="/MySQL主键、外键和索引.html#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="MySQL主键、外键和索引.html" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -360,7 +360,7 @@
 
           
           
-             <span id="/laravel-admin快速搭建后台管理系统.html" class="leancloud_visitors" data-flag-title="laravel-admin快速搭建后台管理系统">
+             <span id="/MySQL主键、外键和索引.html" class="leancloud_visitors" data-flag-title="MySQL主键、外键和索引">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -388,27 +388,42 @@
       
 
       
-        <p>当我们对前端的知识不够了解的时候，做一个laravel后台管理系统的页面是比较费劲。你可以去download一些模板，但是很多时候都需要自己大量修改视图文件，这样子的效率会比较低下。</p>
-<p>最近接触了一款高效搭建后台管理系统的扩展<strong>laravel-admin<strong>，能够帮你在短时间内搭建起简单的管理系统。<br><a id="more"></a></strong></strong></p>
-<h1 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h1><p>在完成laravel的安装配置后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo composer require encore/laravel-admin &quot;1.4.*&quot;</div></pre></td></tr></table></figure></p>
-<p>接下来配置，在config/app.php加入provider数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Encore\Admin\Providers\AdminServiceProvider::class</div></pre></td></tr></table></figure></p>
-<p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo php artisan vendor:publish --tag=laravel-admin</div><div class="line">sudo php artisan admin:install</div></pre></td></tr></table></figure></p>
-<p>以上指令生成了数据库文件，以及后台管理模块(app/admin)</p>
-<p>如果要快速搭建后台管理，首先在设计好的数据库上，处理好model的关系，在model写好关联数据的函数，具体参照laravel官方文档，laravel-admin的curd基于model。</p>
-<p>生成对应model的controller:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo php artisan admin:make xxxController  --model=APP\\Xxxx</div></pre></td></tr></table></figure></p>
-<p>在app/Admin/routes.php添加对应路由:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$router-&gt;resource(&apos;xxx&apos;,xxxController::class)</div></pre></td></tr></table></figure></p>
-<p>后台管理系统路由文件routes.php，可在此添加对应接口供后台管理系统调用。</p>
-<p>基本配置完成。</p>
-<h1 id="grid-amp-form"><a href="#grid-amp-form" class="headerlink" title="grid &amp; form"></a>grid &amp; form</h1><p>在生成controller后，grid和form两个模块能够帮我们快速搭建起可以增删查改的页面。</p>
-<h2 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h2><p>grid负责查、删两个功能。要生成了相关model的表格，我们可以使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;column(&apos;$数据库字段名&apos;,&apos;$你想显示的名称&apos;);</div><div class="line">//or</div><div class="line">$grid-&gt;xxx(&apos;要显示的名称&apos;);</div></pre></td></tr></table></figure></p>
-<p>如果要存的是url，要显示图片:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;xxx(&apos;xxx&apos;,&apos;xxx&apos;)-&gt;image(&apos;$url&apos;,$height,$width);</div><div class="line">//$url为前缀，可为空，空即默认为admin.conf所填写的host</div></pre></td></tr></table></figure></p>
-<p>如果需要在显示上增加逻辑，我们可以使用闭包函数:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;xxx(&apos;xxx&apos;)-&gt;display(function($xxx)&#123;</div><div class="line">    //your code</div><div class="line">    //return your result</div><div class="line">&#125;)；</div></pre></td></tr></table></figure></p>
-<p>也可以return代码，都能正常解析。</p>
-<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p>filter这一方法能够筛选数据，相当于where：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;filter(function($filter)&#123;</div><div class="line">    $filer-&gt;is(&apos;数据库字段名&apos;,&apos;value&apos;);</div><div class="line">    $filet-&gt;like(&apos;xxx&apos;,&apos;xxx&apos;);</div><div class="line">    ...</div><div class="line">&#125;)；</div></pre></td></tr></table></figure></p>
-<h2 id="form"><a href="#form" class="headerlink" title="form"></a>form</h2><p>form负责增、改两个功能，要生成表单，我们可以：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> $form-&gt;text(&apos;xxx&apos;);//文本框</div><div class="line"> $form-&gt;textarea(&apos;xxx&apos;);//文本域</div><div class="line"> $form-&gt;image(&apos;xxx&apos;);//图片</div><div class="line">    -&gt;move(&apos;url&apos;);//移动图片到...</div><div class="line">$form-&gt;multipleImage(&apos;xxx&apos;)；//多图上传</div><div class="line">$form-&gt;file(&apos;xxx&apos;);//文件上传</div><div class="line">//mysql存入文件/图片url时，字段类型可为text或json，需要在model里面设置属性</div></pre></td></tr></table></figure></p>
-<p><a href="http://z-song.github.io/laravel-admin/#/zh/" target="_blank" rel="external">参考文档链接</a></p>
-<p><a href="https://github.com/z-song/laravel-admin" target="_blank" rel="external">github</a></p>
-
+        <h1 id="1-主键"><a href="#1-主键" class="headerlink" title="1. 主键"></a>1. 主键</h1><h2 id="什么是主键？"><a href="#什么是主键？" class="headerlink" title="什么是主键？"></a>什么是主键？</h2><p>主键其实是唯一性索引的一种，我们使用Laravel时，通常会在表里加一个自增的id，默认表中的id为主键。</p>
+<p>属性：<strong>唯一、不为空</strong>。</p>
+<h1 id="2-外键"><a href="#2-外键" class="headerlink" title="2. 外键"></a>2. 外键</h1><h2 id="什么是外键？"><a href="#什么是外键？" class="headerlink" title="什么是外键？"></a>什么是外键？</h2><p>表的外键是另一表的主键, 外键可以有重复的, 可以是空值。多表关联时，我们常用外键与主表建立联系，这样在删除数据时就可以不用从代码上关联删除记录，MySQL会自动删除从表记录。当然这需要在创建表时设计好外键约束。<br><a id="more"></a><br>属性：<strong>可重复，可空值</strong>。</p>
+<h2 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h2><p>父表更新时子表也更新，父表删除时如果子表有匹配的项，删除失败。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> xxx <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> <span class="keyword">name</span> FOREIGN <span class="keyword">KEY</span>(xx) <span class="keyword">REFERENCES</span> xxx(<span class="keyword">id</span>)</div><div class="line">[<span class="keyword">ON</span> <span class="keyword">DELETE</span> reference_option] // 在主表删除时</div><div class="line">[<span class="keyword">ON</span> <span class="keyword">UPDATE</span> reference_option] // 在主表更新时</div><div class="line">reference_option:</div><div class="line">    RESTRICT | <span class="keyword">CASCADE</span> | <span class="keyword">SET</span> <span class="literal">NULL</span> | <span class="keyword">NO</span> <span class="keyword">ACTION</span></div></pre></td></tr></table></figure>
+<p>参数解释:</p>
+<ul>
+<li>CASCADE:<br><br>从父表中删除或更新对应的行，同时自动的删除或更新自表中匹配的行。ON DELETE CANSCADE和ON UPDATE CANSCADE都被InnoDB所支持。<br></li>
+<li>SET NULL: <br><br>从父表中删除或更新对应的行，同时将子表中的外键列设为空。注意，这些在外键列没有被设为NOT NULL时才有效。ON DELETE SET NULL和ON UPDATE SET SET NULL都被InnoDB所支持。<br></li>
+<li>NO ACTION: <br><br>InnoDB拒绝删除或者更新父表。<br></li>
+<li>RESTRICT: <br><br>拒绝删除或者更新父表。指定RESTRICT（或者NO ACTION）和忽略ON DELETE或者ON UPDATE选项的效果是一样的。<br></li>
+</ul>
+<h1 id="3-索引"><a href="#3-索引" class="headerlink" title="3. 索引"></a>3. 索引</h1><h2 id="为什么需要索引"><a href="#为什么需要索引" class="headerlink" title="为什么需要索引"></a>为什么需要索引</h2><p>索引影响着查询速度。至少要理解索引才能数据库调优。<br>假如有一张100w条数据的表(很大很大)，你需要查找一个账号为123的人:</p>
+<ul>
+<li>在没有建立索引的情况下,需要遍历100w行数据，怕不怕</li>
+<li>假如建立的账号的索引，只需要查1或多行(某些索引类型可重复)</li>
+</ul>
+<h2 id="什么是索引？"><a href="#什么是索引？" class="headerlink" title="什么是索引？"></a>什么是索引？</h2><p>MySQL的索引分为单列索引(主键索引,唯索引,普通索引)和组合索引.</p>
+<h3 id="单列索引"><a href="#单列索引" class="headerlink" title="单列索引"></a>单列索引</h3><h4 id="普通索引"><a href="#普通索引" class="headerlink" title="普通索引"></a>普通索引</h4><p>最基本的索引，索引可重复。创建方法：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> indexName <span class="keyword">ON</span> <span class="string">`tableName`</span>(<span class="string">`name`</span>);</div><div class="line">    or</div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tableName <span class="keyword">ADD</span> <span class="keyword">INDEX</span> indexName(<span class="string">`name`</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="唯一索引"><a href="#唯一索引" class="headerlink" title="唯一索引"></a>唯一索引</h4><blockquote>
+<p>与普通索引不同，索引不可重复，可为空。</p>
+</blockquote>
+<p>创建方法:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> indexName <span class="keyword">ON</span> <span class="string">`tableName`</span>(<span class="string">`name`</span>);</div><div class="line">    or</div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tableName <span class="keyword">ADD</span> <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> indexName(<span class="string">`name`</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="主键索引"><a href="#主键索引" class="headerlink" title="主键索引"></a>主键索引</h4><p>一般设为自增的int型，可为char，但是int优于char。</p>
+<h3 id="组合索引"><a href="#组合索引" class="headerlink" title="组合索引"></a>组合索引</h3><p>特定情况下，MySQL效率继续提升。</p>
+<blockquote>
+<p>一个表中如果含有多个单列索引不代表是组合索引，组合索引是:多个字段组合成一个索引<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> indexName <span class="keyword">ON</span> <span class="string">`tableName`</span>(<span class="string">`nameA`</span>, <span class="string">`nameB`</span>, <span class="string">`nameC`</span>);</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>实际效果相当于建立了(nameA, nameB, nameC)、(nameA, nameB)、(nameA)三个索引</p>
+<p>为什么没有(nameB,nameC)?<br>因为MySQL组合索引遵循<strong>最左前缀原则</strong>, 索引的查询条件要注意:</p>
+<ul>
+<li>从最左项查询，即nameA。</li>
+<li>如果使用了范围查询，如like，那么此列右边的列无法作为索引查询。</li>
+</ul>
+<h2 id="什么时候用索引？"><a href="#什么时候用索引？" class="headerlink" title="什么时候用索引？"></a>什么时候用索引？</h2><p>索引可以加快查询速度，但相应的会消耗相应的资源。索引也不是越多越好，在需要频繁插入、删除的表中，MySQL维护更新索引的成本会很大，得不偿失。所以索引适合用在<strong>经常需要查询，改动不频繁</strong>的表上。</p>
+<h2 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> indexName <span class="keyword">ON</span> <span class="string">`tableName`</span>;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -439,6 +454,8 @@
           
             <a href="/tags/laravel/" rel="tag"># laravel</a>
           
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
         </div>
       
 
@@ -450,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Linux常用指令(一).html" rel="next" title="Linux/Ubuntu常用指令(一)">
-                <i class="fa fa-chevron-left"></i> Linux/Ubuntu常用指令(一)
+              <a href="/MySQL锁.html" rel="next" title="MySQL锁">
+                <i class="fa fa-chevron-left"></i> MySQL锁
               </a>
             
           </div>
@@ -460,8 +477,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/部署laravel项目遇到的问题.html" rel="prev" title="部署laravel项目遇到的问题">
-                部署laravel项目遇到的问题 <i class="fa fa-chevron-right"></i>
+              <a href="/维生数后台规范_v1.0.html" rel="prev" title="维生数后台规范_v1.1">
+                维生数后台规范_v1.1 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -622,7 +639,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起步"><span class="nav-text">起步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#grid-amp-form"><span class="nav-text">grid & form</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#grid"><span class="nav-text">grid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#filter"><span class="nav-text">filter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#form"><span class="nav-text">form</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-主键"><span class="nav-text">1. 主键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是主键？"><span class="nav-text">什么是主键？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-外键"><span class="nav-text">2. 外键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是外键？"><span class="nav-text">什么是外键？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外键约束"><span class="nav-text">外键约束</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-索引"><span class="nav-text">3. 索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么需要索引"><span class="nav-text">为什么需要索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是索引？"><span class="nav-text">什么是索引？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单列索引"><span class="nav-text">单列索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#普通索引"><span class="nav-text">普通索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#唯一索引"><span class="nav-text">唯一索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主键索引"><span class="nav-text">主键索引</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合索引"><span class="nav-text">组合索引</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么时候用索引？"><span class="nav-text">什么时候用索引？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除索引"><span class="nav-text">删除索引</span></a></li></ol></li></ol></div>
             
 
           </div>

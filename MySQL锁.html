@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="MySQL," />
 
 
 
@@ -90,16 +90,17 @@
 
 
 
-<meta name="description" content="step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://evankoo.obstacle.cn/categories/index.html">
+<meta name="description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过：什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的：先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料 1. 共享锁（S锁）又称读锁，若事务T对数据对象A加上S锁，则事务T可以读A但不能修改A，其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL锁">
+<meta property="og:url" content="http://evankoo.obstacle.cn/MySQL锁.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="step by step">
-<meta property="og:updated_time" content="2017-09-19T13:43:03.981Z">
+<meta property="og:description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过：什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的：先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料 1. 共享锁（S锁）又称读锁，若事务T对数据对象A加上S锁，则事务T可以读A但不能修改A，其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S">
+<meta property="og:updated_time" content="2017-10-08T08:35:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章分类">
-<meta name="twitter:description" content="step by step">
+<meta name="twitter:title" content="MySQL锁">
+<meta name="twitter:description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过：什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的：先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料 1. 共享锁（S锁）又称读锁，若事务T对数据对象A加上S锁，则事务T可以读A但不能修改A，其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S">
 
 
 
@@ -127,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://evankoo.obstacle.cn/categories/"/>
+  <link rel="canonical" href="http://evankoo.obstacle.cn/MySQL锁.html"/>
 
 
 
 
 
-  <title>文章分类 | Evan Koo</title>
+  <title>MySQL锁 | Evan Koo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -168,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -263,25 +264,206 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h2 class="post-title" itemprop="name headline">文章分类</h2>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/MySQL锁.html">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan Koo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oox5stmf1.bkt.clouddn.com/1245922695.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Evan Koo">
+    </span>
 
     
-    
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 7 个分类
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                MySQL锁
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T20:15:34+08:00">
+                2017-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/MySQL锁.html#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="MySQL锁.html" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/MySQL锁.html" class="leancloud_visitors" data-flag-title="MySQL锁">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/laravel/">laravel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/nginx/">nginx</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a><span class="category-list-count">3</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>最近笔试遇到很多问题，见都没有见过：什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的：先中后序遍历二叉树、快排，GG了，白学了。</p>
+<p>试题出现过两种MySQL锁，查了一下资料</p>
+<h1 id="1-共享锁（S锁）"><a href="#1-共享锁（S锁）" class="headerlink" title="1. 共享锁（S锁）"></a>1. 共享锁（S锁）</h1><p>又称读锁，若事务T对数据对象A加上S锁，则事务T可以读A但不能修改A，其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S锁。<br>这保证了其他事务可以读A，但在T释放A上的S锁之前不能对A做任何修改。</p>
+<h1 id="2-排他锁-（X锁）"><a href="#2-排他锁-（X锁）" class="headerlink" title="2. 排他锁 （X锁）"></a>2. 排他锁 （X锁）</h1><p>又称写锁。若事务T对数据对象A加上X锁，事务T可以读A也可以修改A，其他事务不能再对A加任何锁，直到T释放A上的锁。<br>这保证了其他事务在T释放A上的锁之前不能再读取和修改A。</p>
+<p>以我现在的水平理解，加锁可以保护数据完整性，防止数据更改影响其他事务的运行？？</p>
+<p>等我知道了更多再来写后记，留个坑。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/服务器多网站部署.html" rel="next" title="服务器多网站部署">
+                <i class="fa fa-chevron-left"></i> 服务器多网站部署
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/MySQL主键、外键和索引.html" rel="prev" title="MySQL主键、外键和索引">
+                MySQL主键、外键和索引 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -290,6 +472,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -309,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://oox5stmf1.bkt.clouddn.com/1245922695.jpg"
@@ -401,6 +598,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-text">0. 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-共享锁（S锁）"><span class="nav-text">1. 共享锁（S锁）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-排他锁-（X锁）"><span class="nav-text">2. 排他锁 （X锁）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -541,6 +754,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
