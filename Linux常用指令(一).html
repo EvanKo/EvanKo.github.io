@@ -100,7 +100,7 @@
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/2017-10-08%2012-17-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-10-08T10:08:09.000Z">
+<meta property="og:updated_time" content="2017-10-08T12:44:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux/Ubuntu常用指令(一)">
 <meta name="twitter:description" content="sudo、scp、ps、netstat、grep、man">
@@ -406,9 +406,9 @@
       
 
       
-        <h1 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h1><p>Ubuntu有一个与众不同的特点，那就是初次 使用时，你无法作为root来登录系统。</p>
-<p>我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 <strong>rm .</strong> 而不需要输入任何密码就把你所有文件删掉。</p>
-<p>因此，sudo这个指令在Ubuntu中输入指令前我们经常会用到，为了在普通用户中使用root用户的权限，以至于到了滥用的地步，一条指令前面有sudo和没有sudo执行的过程是不一样的。<br><a id="more"></a><br>以下图为例，为什么会出现版本不同的情况？<br><img src="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="截图"></p>
+        <h1 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h1><p>Ubuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。</p>
+<p>我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”<strong>rm .</strong>“ 而不需要输入任何密码就把你所有文件删掉。</p>
+<p>因此，为了让普通用户能够使用root用户的权限，有时候会到了滥用sudo的地步，权限乱套了打开个编辑器保存文件在用户文件夹也会遇到permission denied的情况，说多了都是泪啊。显然，一条指令前面有sudo和没有sudo是很不一样的。<br><a id="more"></a><br>以下图为例，为什么会出现版本不同的情况？<br><img src="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="截图"></p>
 <p>简单来说sudo仅是在当前操作中调用了root用户的权限，有效期为15分钟。sudo所调用的指令，来自root用户目录下，与普通用户不同，所以会出现以下情况。</p>
 <p>所以，在配置ssh key的时候尤其要注意，以为系统可能调用的是root下的私钥而不是你用户下的私钥。</p>
 <h1 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h1><p>神器，不解释</p>
