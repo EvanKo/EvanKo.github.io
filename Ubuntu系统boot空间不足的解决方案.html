@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="情况Ubuntu在更新时如果出现boot空间不足,如下  在终端输入sudo apt-get clean也无法释放释放boot分区空间时 解决方法1.打开终端 查看linux内核1dpkg --get-selections |grep linux-image 2.查看当前使用内核版本1uname -a 3.谨慎删除旧版本内核1sudo apt-get purge Linux-image-xxx 装">
+<meta name="description" content="情况Ubuntu在更新时如果出现boot空间不足，如下  在终端输入sudo apt-get clean也无法释放释放boot分区空间时 解决方法1.打开终端 查看linux内核1dpkg --get-selections |grep linux-image 2.查看当前使用内核版本1uname -a 3.谨慎删除旧版本内核1sudo apt-get purge Linux-image-xxx 装">
 <meta name="keywords" content="Linux/Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu系统boot空间不足的解决方案">
 <meta property="og:url" content="http://evankoo.obstacle.cn/Ubuntu系统boot空间不足的解决方案.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="情况Ubuntu在更新时如果出现boot空间不足,如下  在终端输入sudo apt-get clean也无法释放释放boot分区空间时 解决方法1.打开终端 查看linux内核1dpkg --get-selections |grep linux-image 2.查看当前使用内核版本1uname -a 3.谨慎删除旧版本内核1sudo apt-get purge Linux-image-xxx 装">
+<meta property="og:description" content="情况Ubuntu在更新时如果出现boot空间不足，如下  在终端输入sudo apt-get clean也无法释放释放boot分区空间时 解决方法1.打开终端 查看linux内核1dpkg --get-selections |grep linux-image 2.查看当前使用内核版本1uname -a 3.谨慎删除旧版本内核1sudo apt-get purge Linux-image-xxx 装">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/2017-08-21%2017-51-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-10-08T09:26:30.128Z">
+<meta property="og:updated_time" content="2017-10-08T10:06:48.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu系统boot空间不足的解决方案">
-<meta name="twitter:description" content="情况Ubuntu在更新时如果出现boot空间不足,如下  在终端输入sudo apt-get clean也无法释放释放boot分区空间时 解决方法1.打开终端 查看linux内核1dpkg --get-selections |grep linux-image 2.查看当前使用内核版本1uname -a 3.谨慎删除旧版本内核1sudo apt-get purge Linux-image-xxx 装">
+<meta name="twitter:description" content="情况Ubuntu在更新时如果出现boot空间不足，如下  在终端输入sudo apt-get clean也无法释放释放boot分区空间时 解决方法1.打开终端 查看linux内核1dpkg --get-selections |grep linux-image 2.查看当前使用内核版本1uname -a 3.谨慎删除旧版本内核1sudo apt-get purge Linux-image-xxx 装">
 <meta name="twitter:image" content="http://oox5stmf1.bkt.clouddn.com/2017-08-21%2017-51-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
 
 
@@ -390,7 +390,7 @@
       
 
       
-        <h3 id="情况"><a href="#情况" class="headerlink" title="情况"></a>情况</h3><p>Ubuntu在更新时如果出现boot空间不足,如下</p>
+        <h3 id="情况"><a href="#情况" class="headerlink" title="情况"></a>情况</h3><p>Ubuntu在更新时如果出现boot空间不足，如下</p>
 <p><img src="http://oox5stmf1.bkt.clouddn.com/2017-08-21%2017-51-54%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="截图"></p>
 <p>在终端输入<strong>sudo apt-get clean<strong>也无法释放释放boot分区空间时</strong></strong></p>
 <h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><h5 id="1-打开终端-查看linux内核"><a href="#1-打开终端-查看linux内核" class="headerlink" title="1.打开终端 查看linux内核"></a>1.打开终端 查看linux内核</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dpkg --get-selections |grep linux-image</div></pre></td></tr></table></figure>

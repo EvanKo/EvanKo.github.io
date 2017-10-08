@@ -4,8 +4,48 @@
 
     
   <url>
+      <loc>http://evankoo.obstacle.cnUbuntu%E7%B3%BB%E7%BB%9Fboot%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</loc>
+    <lastmod>2017-10-08T10:06:48.532Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统boot空间不足的解决方案</title>
+        <pubTime>2017-08-21T09:45:35.000Z</pubTime>
+        
+        <tag>Linux/Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://evankoo.obstacle.cn/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+      <loc>http://evankoo.obstacle.cnMySQL%E9%94%81.html</loc>
+    <lastmod>2017-10-08T10:06:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL锁</title>
+        <pubTime>2017-09-17T12:15:34.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="MySQL" url="http://evankoo.obstacle.cn/categories/MySQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
       <loc>http://evankoo.obstacle.cn%E8%AE%B0%E4%B8%80%E4%B8%AA%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84PHP%20websocket%E6%A1%86%E6%9E%B6.html</loc>
-    <lastmod>2017-10-08T10:02:49.593Z</lastmod>
+    <lastmod>2017-10-08T10:05:47.322Z</lastmod>
     <data>
         <display>
         <title>记一个高性能的PHP websocket框架</title>
@@ -163,26 +203,6 @@
     </url>
 
     
-  <url>
-      <loc>http://evankoo.obstacle.cnUbuntu%E7%B3%BB%E7%BB%9Fboot%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</loc>
-    <lastmod>2017-10-08T09:26:30.128Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu系统boot空间不足的解决方案</title>
-        <pubTime>2017-08-21T09:45:35.000Z</pubTime>
-        
-        <tag>Linux/Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://evankoo.obstacle.cn/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
     
   <url>
@@ -197,26 +217,6 @@
            
              
               <breadCrumb title="随笔" url="http://evankoo.obstacle.cn/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-      <loc>http://evankoo.obstacle.cnMySQL%E9%94%81.html</loc>
-    <lastmod>2017-10-08T08:35:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>MySQL锁</title>
-        <pubTime>2017-09-17T12:15:34.000Z</pubTime>
-        
-        <tag>MySQL</tag>
-         
-         
-           
-             
-              <breadCrumb title="MySQL" url="http://evankoo.obstacle.cn/categories/MySQL/"/>
           
         </display>
     </data>
