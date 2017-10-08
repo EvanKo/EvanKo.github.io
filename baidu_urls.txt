@@ -1,1 +1,2 @@
 http://evankoo.obstacle.cn/服务器多网站部署.html
+http://evankoo.obstacle.cn/MySQL锁.html
