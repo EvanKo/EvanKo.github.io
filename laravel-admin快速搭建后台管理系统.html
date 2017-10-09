@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://evankoo.obstacle.cn/laravel-admin快速搭建后台管理系统.html">
 <meta property="og:site_name" content="Evan Koo">
 <meta property="og:description" content="当我们对前端的知识不够了解的时候，做一个laravel后台管理系统的页面是比较费劲。你可以去download一些模板，但是很多时候都需要自己大量修改视图文件，这样子的效率会比较低下。 最近接触了一款高效搭建后台管理系统的扩展laravel-admin，能够帮你在短时间内搭建起简单的管理系统。">
-<meta property="og:updated_time" content="2017-10-08T09:29:15.937Z">
+<meta property="og:updated_time" content="2017-10-09T14:22:59.534Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="laravel-admin快速搭建后台管理系统">
 <meta name="twitter:description" content="当我们对前端的知识不够了解的时候，做一个laravel后台管理系统的页面是比较费劲。你可以去download一些模板，但是很多时候都需要自己大量修改视图文件，这样子的效率会比较低下。 最近接触了一款高效搭建后台管理系统的扩展laravel-admin，能够帮你在短时间内搭建起简单的管理系统。">
@@ -443,12 +443,12 @@
 <p>后台管理系统路由文件routes.php，可在此添加对应接口供后台管理系统调用。</p>
 <p>基本配置完成。</p>
 <h1 id="grid-amp-form"><a href="#grid-amp-form" class="headerlink" title="grid &amp; form"></a>grid &amp; form</h1><p>在生成controller后，grid和form两个模块能够帮我们快速搭建起可以增删查改的页面。</p>
-<h2 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h2><p>grid负责查、删两个功能。要生成了相关model的表格，我们可以使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;column(&apos;$数据库字段名&apos;,&apos;$你想显示的名称&apos;);</div><div class="line">//or</div><div class="line">$grid-&gt;xxx(&apos;要显示的名称&apos;);</div></pre></td></tr></table></figure></p>
+<h2 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h2><p>grid负责查、删两个功能。要生成了相关model的表格，我们可以使用:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;column(&apos;$数据库字段名&apos;,&apos;$你想显示的名称&apos;);</div><div class="line">//or</div><div class="line">$grid-&gt;xxx(&apos;要显示的名称&apos;);</div></pre></td></tr></table></figure></p>
 <p>如果要存的是url，要显示图片:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;xxx(&apos;xxx&apos;,&apos;xxx&apos;)-&gt;image(&apos;$url&apos;,$height,$width);</div><div class="line">//$url为前缀，可为空，空即默认为admin.conf所填写的host</div></pre></td></tr></table></figure></p>
 <p>如果需要在显示上增加逻辑，我们可以使用闭包函数:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;xxx(&apos;xxx&apos;)-&gt;display(function($xxx)&#123;</div><div class="line">    //your code</div><div class="line">    //return your result</div><div class="line">&#125;)；</div></pre></td></tr></table></figure></p>
 <p>也可以return代码，都能正常解析。</p>
-<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p>filter这一方法能够筛选数据，相当于where：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;filter(function($filter)&#123;</div><div class="line">    $filer-&gt;is(&apos;数据库字段名&apos;,&apos;value&apos;);</div><div class="line">    $filet-&gt;like(&apos;xxx&apos;,&apos;xxx&apos;);</div><div class="line">    ...</div><div class="line">&#125;)；</div></pre></td></tr></table></figure></p>
-<h2 id="form"><a href="#form" class="headerlink" title="form"></a>form</h2><p>form负责增、改两个功能，要生成表单，我们可以：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> $form-&gt;text(&apos;xxx&apos;);//文本框</div><div class="line"> $form-&gt;textarea(&apos;xxx&apos;);//文本域</div><div class="line"> $form-&gt;image(&apos;xxx&apos;);//图片</div><div class="line">    -&gt;move(&apos;url&apos;);//移动图片到...</div><div class="line">$form-&gt;multipleImage(&apos;xxx&apos;)；//多图上传</div><div class="line">$form-&gt;file(&apos;xxx&apos;);//文件上传</div><div class="line">//mysql存入文件/图片url时，字段类型可为text或json，需要在model里面设置属性</div></pre></td></tr></table></figure></p>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p>filter这一方法能够筛选数据，相当于where:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$grid-&gt;filter(function($filter)&#123;</div><div class="line">    $filer-&gt;is(&apos;数据库字段名&apos;,&apos;value&apos;);</div><div class="line">    $filet-&gt;like(&apos;xxx&apos;,&apos;xxx&apos;);</div><div class="line">    ...</div><div class="line">&#125;)；</div></pre></td></tr></table></figure></p>
+<h2 id="form"><a href="#form" class="headerlink" title="form"></a>form</h2><p>form负责增、改两个功能，要生成表单，我们可以:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> $form-&gt;text(&apos;xxx&apos;);//文本框</div><div class="line"> $form-&gt;textarea(&apos;xxx&apos;);//文本域</div><div class="line"> $form-&gt;image(&apos;xxx&apos;);//图片</div><div class="line">    -&gt;move(&apos;url&apos;);//移动图片到...</div><div class="line">$form-&gt;multipleImage(&apos;xxx&apos;)；//多图上传</div><div class="line">$form-&gt;file(&apos;xxx&apos;);//文件上传</div><div class="line">//mysql存入文件/图片url时，字段类型可为text或json，需要在model里面设置属性</div></pre></td></tr></table></figure></p>
 <p><a href="http://z-song.github.io/laravel-admin/#/zh/" target="_blank" rel="external">参考文档链接</a></p>
 <p><a href="https://github.com/z-song/laravel-admin" target="_blank" rel="external">github</a></p>
 
@@ -594,7 +594,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -713,7 +713,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">博客全站共5.8k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         

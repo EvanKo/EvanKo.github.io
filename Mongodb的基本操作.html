@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://evankoo.obstacle.cn/Mongodb的基本操作.html">
 <meta property="og:site_name" content="Evan Koo">
 <meta property="og:description" content="0.写在前面近年来后端nodejs+MongoDB的搭配好像比世界上最好的语言PHP+MySQL要火得多。虽然我node不怎么行，但是MongoDB还是要学一下的，PHP也能搭MongoDB。不过MySQL 5.7新特性终于支持json了，好像也还行，多一种选择。">
-<meta property="og:updated_time" content="2017-10-08T13:44:54.309Z">
+<meta property="og:updated_time" content="2017-10-09T09:34:49.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mongodb的基本操作">
 <meta name="twitter:description" content="0.写在前面近年来后端nodejs+MongoDB的搭配好像比世界上最好的语言PHP+MySQL要火得多。虽然我node不怎么行，但是MongoDB还是要学一下的，PHP也能搭MongoDB。不过MySQL 5.7新特性终于支持json了，好像也还行，多一种选择。">
@@ -455,8 +455,8 @@
 <blockquote>
 <p>$gt ——– greater than  &gt; <br><br>$gte ——— gt equal  &gt;= <br><br>$lt ——– less than  &lt;<br><br>$lte ——— lt equal &lt;=<br><br>$ne ———– not equal  !=<br><br>$eq  ——–  equal  =<br></p>
 </blockquote>
-<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>查找排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;) // 1升序，-1降序</div></pre></td></tr></table></figure></p>
-<h3 id="limit和skip"><a href="#limit和skip" class="headerlink" title="limit和skip"></a>limit和skip</h3><p>可以用来做分页功能，跟MySQL差不多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find().limit(NUMBER)</div><div class="line">db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)</div></pre></td></tr></table></figure></p>
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><p>查找排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;) // 1升序，-1降序</div></pre></td></tr></table></figure></p>
+<h4 id="limit和skip"><a href="#limit和skip" class="headerlink" title="limit和skip"></a>limit和skip</h4><p>可以用来做分页功能，跟MySQL差不多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find().limit(NUMBER)</div><div class="line">db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)</div></pre></td></tr></table></figure></p>
 <h3 id="update"><a href="#update" class="headerlink" title="update"></a>update</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.update(</div><div class="line">   &lt;query&gt;,  // 条件</div><div class="line">   &lt;update&gt;, // 通常是&#123;$set:&#123;key:value...&#125;&#125; 相当于SQL的set</div><div class="line">   &#123;</div><div class="line">     upsert: &lt;boolean&gt;,</div><div class="line">     multi: &lt;boolean&gt;,</div><div class="line">     writeConcern: &lt;document&gt;</div><div class="line">   &#125;</div><div class="line">)</div></pre></td></tr></table></figure>
 <p>参数说明</p>
 <ul>
@@ -530,6 +530,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/Linux常用指令-二.html" rel="next" title="Linux常用指令(二)">
+                <i class="fa fa-chevron-left"></i> Linux常用指令(二)
+              </a>
             
           </div>
 
@@ -613,7 +617,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -699,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-text">0.写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-NoSQL"><span class="nav-text">1.NoSQL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-MongoDB基本用法"><span class="nav-text">2.MongoDB基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建和删除数据库"><span class="nav-text">创建和删除数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增删查改"><span class="nav-text">增删查改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#insert"><span class="nav-text">insert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove"><span class="nav-text">remove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-text">find</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#条件操作符"><span class="nav-text">条件操作符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#limit和skip"><span class="nav-text">limit和skip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#update"><span class="nav-text">update</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#save"><span class="nav-text">save</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份与恢复"><span class="nav-text">备份与恢复</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-text">0.写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-NoSQL"><span class="nav-text">1.NoSQL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-MongoDB基本用法"><span class="nav-text">2.MongoDB基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建和删除数据库"><span class="nav-text">创建和删除数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增删查改"><span class="nav-text">增删查改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#insert"><span class="nav-text">insert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove"><span class="nav-text">remove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-text">find</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#条件操作符"><span class="nav-text">条件操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#limit和skip"><span class="nav-text">limit和skip</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#update"><span class="nav-text">update</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#save"><span class="nav-text">save</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份与恢复"><span class="nav-text">备份与恢复</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -732,7 +736,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">博客全站共5.8k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         

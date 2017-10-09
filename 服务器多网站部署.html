@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://evankoo.obstacle.cn/服务器多网站部署.html">
 <meta property="og:site_name" content="Evan Koo">
 <meta property="og:description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
-<meta property="og:updated_time" content="2017-10-08T09:29:36.941Z">
+<meta property="og:updated_time" content="2017-10-09T14:23:11.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器多网站部署">
 <meta name="twitter:description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
@@ -437,7 +437,7 @@
 <p>将该域名80端口的请求转发到另外一个端口上，就能实现多个域名”占用了一个端口”，直接输入域名即可，不再需要端口号。</p>
 <h1 id="2-nginx配置示例"><a href="#2-nginx配置示例" class="headerlink" title="2. nginx配置示例"></a>2. nginx配置示例</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen 80;          </div><div class="line">        server_name domain_name;</div><div class="line"></div><div class="line">        location / &#123; </div><div class="line">                proxy_pass http://localhost:8996; </div><div class="line">                proxy_set_header Host $host:$server_port;</div><div class="line">                proxy_set_header X-Real-IP $remote_addr;</div><div class="line">                proxy_set_header REMOTE-HOST $remote_addr;</div><div class="line">                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</div><div class="line">        &#125;   </div><div class="line"># 转发到此端口</div><div class="line">server &#123;</div><div class="line">        listen 8996;    </div><div class="line"></div><div class="line">        root /var/www/activity;</div><div class="line">        index index.php index.html;</div><div class="line">        # Make site accessible from http://localhost/</div><div class="line">        server_name localhost;  </div><div class="line">        // other conf</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
 <h1 id="附语法"><a href="#附语法" class="headerlink" title="附语法"></a>附语法</h1><blockquote>
-<p>语法规则：<br>location [=|~|~*|^~] /uri/ { … } <br></p>
+<p>语法规则:<br>location [=|~|~*|^~] /uri/ { … } <br></p>
 <ul>
 <li>=   开头表示精确匹配  <br></li>
 <li>^~  开头表示uri以某个常规字符串开头，理解为匹配 url路径即可。nginx不对url做编码，因此请求为/static/20%/aa，可以被规则^~ /static/ /aa匹配到(注意是空格)。 <br></li>
@@ -591,7 +591,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -710,7 +710,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">博客全站共5.8k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         

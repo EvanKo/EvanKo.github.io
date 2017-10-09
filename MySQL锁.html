@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过：什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的：先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料">
+<meta name="description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过:什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的:先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL锁">
 <meta property="og:url" content="http://evankoo.obstacle.cn/MySQL锁.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过：什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的：先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料">
-<meta property="og:updated_time" content="2017-10-08T10:06:01.000Z">
+<meta property="og:description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过:什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的:先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料">
+<meta property="og:updated_time" content="2017-10-09T14:23:06.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL锁">
-<meta name="twitter:description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过：什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的：先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料">
+<meta name="twitter:description" content="0. 写在前面最近笔试遇到很多问题，见都没有见过:什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的:先中后序遍历二叉树、快排，GG了，白学了。 试题出现过两种MySQL锁，查了一下资料">
 
 
 
@@ -431,7 +431,7 @@
       
 
       
-        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>最近笔试遇到很多问题，见都没有见过：什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的：先中后序遍历二叉树、快排，GG了，白学了。</p>
+        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>最近笔试遇到很多问题，见都没有见过:什么信号量机制(后来发现是操作系统的重要内容，但是我还没学到)、什么MySQL锁；知道的但是做不出来或者不敢肯定的:先中后序遍历二叉树、快排，GG了，白学了。</p>
 <p>试题出现过两种MySQL锁，查了一下资料<br><a id="more"></a></p>
 <h1 id="1-共享锁（S锁）"><a href="#1-共享锁（S锁）" class="headerlink" title="1. 共享锁（S锁）"></a>1. 共享锁（S锁）</h1><p>又称读锁，若事务T对数据对象A加上S锁，则事务T可以读A但不能修改A，其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S锁。<br>这保证了其他事务可以读A，但在T释放A上的S锁之前不能对A做任何修改。</p>
 <h1 id="2-排他锁-（X锁）"><a href="#2-排他锁-（X锁）" class="headerlink" title="2. 排他锁 （X锁）"></a>2. 排他锁 （X锁）</h1><p>又称写锁。若事务T对数据对象A加上X锁，事务T可以读A也可以修改A，其他事务不能再对A加任何锁，直到T释放A上的锁。<br>这保证了其他事务在T释放A上的锁之前不能再读取和修改A。</p>
@@ -580,7 +580,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -699,7 +699,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">博客全站共5.8k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         

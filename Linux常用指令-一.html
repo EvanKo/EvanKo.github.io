@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux/Ubuntu," />
 
 
 
@@ -90,15 +90,21 @@
 
 
 
-<meta name="description" content="step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Evan Koo">
-<meta property="og:url" content="http://evankoo.obstacle.cn/tags/Nginx/index.html">
+<meta name="description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。 1. sudoUbuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。 我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”rm .“ 而不需要输入任何密码就把你所">
+<meta name="keywords" content="Linux/Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux/Ubuntu常用指令(一)">
+<meta property="og:url" content="http://evankoo.obstacle.cn/Linux常用指令-一.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="step by step">
+<meta property="og:description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。 1. sudoUbuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。 我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”rm .“ 而不需要输入任何密码就把你所">
+<meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/2017-10-08%2012-17-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:updated_time" content="2017-10-09T14:21:49.373Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Evan Koo">
-<meta name="twitter:description" content="step by step">
+<meta name="twitter:title" content="Linux/Ubuntu常用指令(一)">
+<meta name="twitter:description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。 1. sudoUbuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。 我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”rm .“ 而不需要输入任何密码就把你所">
+<meta name="twitter:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 
 
 
@@ -140,13 +146,13 @@
 </style>
 
 
-  <link rel="canonical" href="http://evankoo.obstacle.cn/tags/Nginx/"/>
+  <link rel="canonical" href="http://evankoo.obstacle.cn/Linux常用指令-一.html"/>
 
 
 
 
 
-  <title>标签: Nginx | Evan Koo</title>
+  <title>Linux/Ubuntu常用指令(一) | Evan Koo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -181,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,74 +291,269 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Nginx
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/服务器多网站部署.html" itemprop="url">
-              
-                <span itemprop="name">服务器多网站部署</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-01T12:32:45+08:00"
-              content="2017-10-01" >
-          10-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/部署laravel项目遇到的问题.html" itemprop="url">
-              
-                <span itemprop="name">部署laravel项目遇到的问题</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-30T17:34:54+08:00"
-              content="2017-04-30" >
-          04-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/Linux常用指令-一.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan Koo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oox5stmf1.bkt.clouddn.com/1245922695.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Evan Koo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                Linux/Ubuntu常用指令(一)
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-16T22:22:16+08:00">
+                2017-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/Linux常用指令-一.html#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="Linux常用指令-一.html" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/Linux常用指令-一.html" class="leancloud_visitors" data-flag-title="Linux/Ubuntu常用指令(一)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  816
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。</p>
+<h1 id="1-sudo"><a href="#1-sudo" class="headerlink" title="1. sudo"></a>1. sudo</h1><p>Ubuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。</p>
+<p>我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”<strong>rm .</strong>“ 而不需要输入任何密码就把你所有文件删掉。</p>
+<p>因此，为了让普通用户能够使用root用户的权限，有时候会到了滥用sudo的地步，权限乱套了打开个编辑器保存文件在用户文件夹也会遇到permission denied的情况，说多了都是泪啊。显然，一条指令前面有sudo和没有sudo是很不一样的。<br><a id="more"></a><br>以下图为例，为什么会出现版本不同的情况？<br><img src="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="截图"></p>
+<p>简单来说sudo仅是在当前操作中调用了root用户的权限，有效期为15分钟。sudo所调用的指令，来自root用户目录下，与普通用户不同，所以会出现以下情况。</p>
+<p>所以，在配置ssh key的时候尤其要注意，因为系统可能调用的是root下的私钥而不是你用户下的私钥。</p>
+<h1 id="2-scp"><a href="#2-scp" class="headerlink" title="2. scp"></a>2. scp</h1><p>神器，不解释</p>
+<p>Linux之间的传文件神器，可直接上传文件到服务器(不推荐)，同一网段间的设备只要装上服务器软件，也可通讯。</p>
+<p>具体用法是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp your_file user_name@ip:/path</div></pre></td></tr></table></figure></p>
+<h1 id="3-whereis"><a href="#3-whereis" class="headerlink" title="3. whereis"></a>3. whereis</h1><p>查找指令所在目录方便更改配置文件</p>
+<p><img src="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="截图"></p>
+<h1 id="4-grep"><a href="#4-grep" class="headerlink" title="4. grep"></a>4. grep</h1><p> 这个就厉害了，无论是查找文件和进程，都很有用。</p>
+<p> 配合正则使用，需要有一点正则的基础</p>
+<p><img src="http://oox5stmf1.bkt.clouddn.com/2017-10-08%2012-17-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="图片"></p>
+<p>ps:”|”这个符号y而是一个强大的符号，叫做<strong>管道符号</strong>，指令1|指令2这种顺序的话，指令1的结果会传送的指令2进行处理。</p>
+<h1 id="5-ps"><a href="#5-ps" class="headerlink" title="5. ps"></a>5. ps</h1><p>不是那个Photoshop，我们通常会用到以下指令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ps -aux // 可以看到所有运行的程序 与 grep 连用筛选</div><div class="line"></div><div class="line">ps <span class="_">-a</span> // 显示现行终端机下的所有程序（包括其他用户的程序）</div><div class="line"></div><div class="line">ps -u // 以用户为主的排序显示（username）</div><div class="line"></div><div class="line">ps -x // 显示所有程序（包括所有终端机下的）</div></pre></td></tr></table></figure></p>
+<p>配合 <strong>grep</strong> 使用更佳。</p>
+<h1 id="6-netstat"><a href="#6-netstat" class="headerlink" title="6. netstat"></a>6. netstat</h1><p>这个跟<strong>ps</strong>有点像，但是是列出与网络相关的进程，查看端口时很有用。下面是参数:</p>
+<blockquote>
+<p>-a (all)显示所有选项，默认不显示LISTEN相关</p>
+<p>-t (tcp)仅显示tcp相关选项</p>
+<p>-u (udp)仅显示udp相关选项</p>
+<p>-n 拒绝显示别名，能显示数字的全部转化成数字。</p>
+<p>-l 仅列出有在 Listen (监听) 的服務状态</p>
+<p>-p 显示建立相关链接的程序名</p>
+<p>-r 显示路由信息，路由表</p>
+<p>-e 显示扩展信息，例如uid等</p>
+<p>-s 按各个协议进行统计</p>
+<p>-c 每隔一个固定时间，执行该netstat命令。</p>
+<p>提示:LISTEN和LISTENING的状态只有用-a或者-l才能看到</p>
+</blockquote>
+<p>同样，配合 <strong>grep</strong> 使用更佳。</p>
+<h1 id="7-man"><a href="#7-man" class="headerlink" title="7. man"></a>7. man</h1><p>指令手册，全英的。哪里不懂查哪里。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Evan Koo
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://evankoo.obstacle.cn/Linux常用指令-一.html" title="Linux/Ubuntu常用指令(一)">http://evankoo.obstacle.cn/Linux常用指令-一.html</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux-Ubuntu/" rel="tag"># Linux/Ubuntu</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/crontab实现定时任务.html" rel="next" title="crontab实现定时任务">
+                <i class="fa fa-chevron-left"></i> crontab实现定时任务
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/记一个高性能的PHP websocket框架.html" rel="prev" title="记一个高性能的PHP websocket框架">
+                记一个高性能的PHP websocket框架 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -360,6 +561,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -379,8 +586,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://oox5stmf1.bkt.clouddn.com/1245922695.jpg"
@@ -471,6 +687,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-text">0. 写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-sudo"><span class="nav-text">1. sudo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-scp"><span class="nav-text">2. scp</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-whereis"><span class="nav-text">3. whereis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-grep"><span class="nav-text">4. grep</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-ps"><span class="nav-text">5. ps</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-netstat"><span class="nav-text">6. netstat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-man"><span class="nav-text">7. man</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -604,6 +836,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
