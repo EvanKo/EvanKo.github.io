@@ -90,20 +90,20 @@
 
 
 
-<meta name="description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。 1. sudoUbuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。 我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”rm .“ 而不需要输入任何密码就把你所">
+<meta name="description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。">
 <meta name="keywords" content="Linux/Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux/Ubuntu常用指令(一)">
 <meta property="og:url" content="http://evankoo.obstacle.cn/Linux常用指令-一.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。 1. sudoUbuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。 我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”rm .“ 而不需要输入任何密码就把你所">
+<meta property="og:description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/2017-10-08%2012-17-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-10-10T09:17:50.756Z">
+<meta property="og:updated_time" content="2017-10-10T09:20:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux/Ubuntu常用指令(一)">
-<meta name="twitter:description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。 1. sudoUbuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。 我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”rm .“ 而不需要输入任何密码就把你所">
+<meta name="twitter:description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。">
 <meta name="twitter:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 
 
@@ -445,10 +445,11 @@
       
 
       
-        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。</p>
+        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。<a id="more"></a></p>
 <h1 id="1-sudo"><a href="#1-sudo" class="headerlink" title="1. sudo"></a>1. sudo</h1><p>Ubuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。</p>
 <p>我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”<strong>rm .</strong>“ 而不需要输入任何密码就把你所有文件删掉。</p>
-<p>因此，为了让普通用户能够使用root用户的权限，有时候会到了滥用sudo的地步，权限乱套了打开个编辑器保存文件在用户文件夹也会遇到permission denied的情况，说多了都是泪啊。显然，一条指令前面有sudo和没有sudo是很不一样的。<br><a id="more"></a><br>以下图为例，为什么会出现版本不同的情况？<br><img src="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="截图"></p>
+<p>因此，为了让普通用户能够使用root用户的权限，有时候会到了滥用sudo的地步，权限乱套了打开个编辑器保存文件在用户文件夹也会遇到permission denied的情况，说多了都是泪啊。显然，一条指令前面有sudo和没有sudo是很不一样的。</p>
+<p>以下图为例，为什么会出现版本不同的情况？<br><img src="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="截图"></p>
 <p>简单来说sudo仅是在当前操作中调用了root用户的权限，有效期为15分钟。sudo所调用的指令，来自root用户目录下，与普通用户不同，所以会出现以下情况。</p>
 <p>所以，在配置ssh key的时候尤其要注意，因为系统可能调用的是root下的私钥而不是你用户下的私钥。</p>
 <h1 id="2-scp"><a href="#2-scp" class="headerlink" title="2. scp"></a>2. scp</h1><p>神器，不解释</p>
