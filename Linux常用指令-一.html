@@ -100,7 +100,7 @@
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/2017-10-08%2012-17-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-10-09T14:21:49.373Z">
+<meta property="og:updated_time" content="2017-10-10T09:17:50.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux/Ubuntu常用指令(一)">
 <meta name="twitter:description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。 1. sudoUbuntu有一个与众不同的特点，那就是初次使用时，你无法作为root来登录系统。 我们可以用su这条指令切换到root用户，实际上我们一般不会这样做，因为你不知道哪一天会不会手抖打出了 ”rm .“ 而不需要输入任何密码就把你所">
@@ -464,17 +464,7 @@
 <p>配合 <strong>grep</strong> 使用更佳。</p>
 <h1 id="6-netstat"><a href="#6-netstat" class="headerlink" title="6. netstat"></a>6. netstat</h1><p>这个跟<strong>ps</strong>有点像，但是是列出与网络相关的进程，查看端口时很有用。下面是参数:</p>
 <blockquote>
-<p>-a (all)显示所有选项，默认不显示LISTEN相关</p>
-<p>-t (tcp)仅显示tcp相关选项</p>
-<p>-u (udp)仅显示udp相关选项</p>
-<p>-n 拒绝显示别名，能显示数字的全部转化成数字。</p>
-<p>-l 仅列出有在 Listen (监听) 的服務状态</p>
-<p>-p 显示建立相关链接的程序名</p>
-<p>-r 显示路由信息，路由表</p>
-<p>-e 显示扩展信息，例如uid等</p>
-<p>-s 按各个协议进行统计</p>
-<p>-c 每隔一个固定时间，执行该netstat命令。</p>
-<p>提示:LISTEN和LISTENING的状态只有用-a或者-l才能看到</p>
+<p>-a (all)显示所有选项，默认不显示LISTEN相关<br>-t (tcp)仅显示tcp相关选项<br>-u (udp)仅显示udp相关选项<br>-n 拒绝显示别名，能显示数字的全部转化成数字。<br>-l 仅列出有在 Listen (监听) 的服務状态<br>-p 显示建立相关链接的程序名<br>-r 显示路由信息，路由表<br>-e 显示扩展信息，例如uid等<br>-s 按各个协议进行统计<br>-c 每隔一个固定时间，执行该netstat命令。<br>提示:LISTEN和LISTENING的状态只有用-a或者-l才能看到</p>
 </blockquote>
 <p>同样，配合 <strong>grep</strong> 使用更佳。</p>
 <h1 id="7-man"><a href="#7-man" class="headerlink" title="7. man"></a>7. man</h1><p>指令手册，全英的。哪里不懂查哪里。</p>

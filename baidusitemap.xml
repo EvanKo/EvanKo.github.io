@@ -3,13 +3,12 @@
 
 
     
-    
   <url>
       <loc>http://evankoo.obstacle.cnLinux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4-%E4%BA%8C.html</loc>
-    <lastmod>2017-10-09T14:26:41.030Z</lastmod>
+    <lastmod>2017-10-10T09:18:04.952Z</lastmod>
     <data>
         <display>
-        <title>Linux常用指令(二)</title>
+        <title>Linux/Ubuntu常用指令(二)</title>
         <pubTime>2017-10-09T12:11:21.000Z</pubTime>
         
         <tag>Linux/Ubuntu</tag>
@@ -23,6 +22,27 @@
     </data>
     </url>
 
+    
+  <url>
+      <loc>http://evankoo.obstacle.cnLinux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4-%E4%B8%80.html</loc>
+    <lastmod>2017-10-10T09:17:50.756Z</lastmod>
+    <data>
+        <display>
+        <title>Linux/Ubuntu常用指令(一)</title>
+        <pubTime>2017-07-16T14:22:16.000Z</pubTime>
+        
+        <tag>Linux/Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://evankoo.obstacle.cn/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
       <loc>http://evankoo.obstacle.cn%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A4%9A%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2.html</loc>
@@ -98,26 +118,6 @@
            
              
               <breadCrumb title="Laravel" url="http://evankoo.obstacle.cn/categories/Laravel/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-      <loc>http://evankoo.obstacle.cnLinux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4-%E4%B8%80.html</loc>
-    <lastmod>2017-10-09T14:21:49.373Z</lastmod>
-    <data>
-        <display>
-        <title>Linux/Ubuntu常用指令(一)</title>
-        <pubTime>2017-07-16T14:22:16.000Z</pubTime>
-        
-        <tag>Linux/Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://evankoo.obstacle.cn/categories/Linux/"/>
           
         </display>
     </data>
