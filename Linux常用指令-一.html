@@ -100,7 +100,7 @@
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://oox5stmf1.bkt.clouddn.com/2017-10-08%2012-17-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-10-10T09:20:33.000Z">
+<meta property="og:updated_time" content="2017-10-11T12:38:06.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux/Ubuntu常用指令(一)">
 <meta name="twitter:description" content="0. 写在前面使用Ubuntu已经有1年有多了，分享一下自己常用的指令，顺便当做备忘录吧。这次有sudo、scp、ps、netstat、grep、man。">
@@ -461,7 +461,7 @@
 <p> 配合正则使用，需要有一点正则的基础</p>
 <p><img src="http://oox5stmf1.bkt.clouddn.com/2017-10-08%2012-17-29%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="图片"></p>
 <p>ps:”|”这个符号y而是一个强大的符号，叫做<strong>管道符号</strong>，指令1|指令2这种顺序的话，指令1的结果会传送的指令2进行处理。</p>
-<h1 id="5-ps"><a href="#5-ps" class="headerlink" title="5. ps"></a>5. ps</h1><p>不是那个Photoshop，我们通常会用到以下指令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ps -aux // 可以看到所有运行的程序 与 grep 连用筛选</div><div class="line"></div><div class="line">ps <span class="_">-a</span> // 显示现行终端机下的所有程序（包括其他用户的程序）</div><div class="line"></div><div class="line">ps -u // 以用户为主的排序显示（username）</div><div class="line"></div><div class="line">ps -x // 显示所有程序（包括所有终端机下的）</div></pre></td></tr></table></figure></p>
+<h1 id="5-ps"><a href="#5-ps" class="headerlink" title="5. ps"></a>5. ps</h1><p>不是那个Photoshop，我们通常会用到以下指令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ps -aux // 可以看到所有运行的程序 与 grep 连用筛选</div><div class="line">ps <span class="_">-a</span> // 显示现行终端机下的所有程序（包括其他用户的程序）</div><div class="line">ps -u // 以用户为主的排序显示（username）</div><div class="line">ps -x // 显示所有程序（包括所有终端机下的）</div></pre></td></tr></table></figure></p>
 <p>配合 <strong>grep</strong> 使用更佳。</p>
 <h1 id="6-netstat"><a href="#6-netstat" class="headerlink" title="6. netstat"></a>6. netstat</h1><p>这个跟<strong>ps</strong>有点像，但是是列出与网络相关的进程，查看端口时很有用。下面是参数:</p>
 <blockquote>
