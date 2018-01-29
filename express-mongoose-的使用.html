@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="0在express框架下使用mongoose这个扩展方便进行mongoDB的增删查改，更加直观。 １.连接数据库在项目的根目录下新建了一个config文件夹，config.js记录mongoDB数据库连接参数123var mongoose = require(&apos;mongoose&apos;);mongoose.connect(&apos;mongodb://localhost:27017/BBook&apos;,&amp;#123;u">
+<meta name="description" content="0在express框架下使用mongoose这个扩展方便进行mongoDB的增删查改，更加直观。">
 <meta name="keywords" content="Node.js,mongoDB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="express + mongoose 的使用">
 <meta property="og:url" content="http://evankoo.obstacle.cn/express-mongoose-的使用.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="0在express框架下使用mongoose这个扩展方便进行mongoDB的增删查改，更加直观。 １.连接数据库在项目的根目录下新建了一个config文件夹，config.js记录mongoDB数据库连接参数123var mongoose = require(&apos;mongoose&apos;);mongoose.connect(&apos;mongodb://localhost:27017/BBook&apos;,&amp;#123;u">
-<meta property="og:updated_time" content="2018-01-18T12:14:19.817Z">
+<meta property="og:description" content="0在express框架下使用mongoose这个扩展方便进行mongoDB的增删查改，更加直观。">
+<meta property="og:updated_time" content="2018-01-29T03:30:27.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="express + mongoose 的使用">
-<meta name="twitter:description" content="0在express框架下使用mongoose这个扩展方便进行mongoDB的增删查改，更加直观。 １.连接数据库在项目的根目录下新建了一个config文件夹，config.js记录mongoDB数据库连接参数123var mongoose = require(&apos;mongoose&apos;);mongoose.connect(&apos;mongodb://localhost:27017/BBook&apos;,&amp;#123;u">
+<meta name="twitter:description" content="0在express框架下使用mongoose这个扩展方便进行mongoDB的增删查改，更加直观。">
 
 
 
@@ -441,7 +441,7 @@
       
 
       
-        <h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>在express框架下使用mongoose这个扩展方便进行mongoDB的增删查改，更加直观。</p>
+        <h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>在express框架下使用mongoose这个扩展方便进行mongoDB的增删查改，更加直观。<br><a id="more"></a></p>
 <h1 id="１-连接数据库"><a href="#１-连接数据库" class="headerlink" title="１.连接数据库"></a>１.连接数据库</h1><p>在项目的根目录下新建了一个config文件夹，config.js记录mongoDB数据库连接参数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</div><div class="line">mongoose.connect(<span class="string">'mongodb://localhost:27017/BBook'</span>,&#123;<span class="attr">useMongoClient</span>: <span class="literal">true</span>&#125;);</div><div class="line"><span class="built_in">module</span>.exports = &#123;mongoose&#125;;</div></pre></td></tr></table></figure></p>
 <h1 id="2-Model"><a href="#2-Model" class="headerlink" title="2.Model"></a>2.Model</h1><p>再在根目录新建一个models文件夹，用于存放不同数据类型的schema，model继承Base.js</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'../config/config'</span>);</div><div class="line">mongoose.Promise = global.Promise;</div><div class="line"></div><div class="line"><span class="keyword">var</span> Schema = mongoose.Schema; </div><div class="line"><span class="keyword">var</span> ObjectId = Schema.Types.ObjectId; </div><div class="line"> </div><div class="line">exports.mongoose = mongoose; </div><div class="line">exports.Schema = Schema;  </div><div class="line">exports.ObjectId = ObjectId; </div><div class="line">exports.Mixed = Schema.Types.Mixed;</div></pre></td></tr></table></figure>
