@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux/Ubuntu," />
+  <meta name="keywords" content="Node.js,mongoDB," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="0.写在前面Linux常用指令的第二篇文章，这次开头还是再讲一下Ubuntu的权限问题，一开始接触Linux权限的问题确实很坑爹，但了解之后会发现Linux真的很好玩很强大；其次补充一些很好用的指令。shell推荐使用zsh，自带的bash比较难用。">
-<meta name="keywords" content="Linux/Ubuntu">
+<meta name="description" content="0mongoDB 是一个文档型数据库，在数据关系简单的情况下，可以通过文档内嵌，一些简单的数据关联写进同一个文档里，这种情况就比 MySQL 方便。那如果关系更加复杂的情况下，比如经常遇到的 user-post-comment 这种一对多，就用 populate 比较方便了">
+<meta name="keywords" content="Node.js,mongoDB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux/Ubuntu常用指令(二)">
-<meta property="og:url" content="http://evankoo.obstacle.cn/Linux常用指令-二.html">
+<meta property="og:title" content="mongoose关联查询">
+<meta property="og:url" content="http://evankoo.obstacle.cn/mongoose关联查询.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="0.写在前面Linux常用指令的第二篇文章，这次开头还是再讲一下Ubuntu的权限问题，一开始接触Linux权限的问题确实很坑爹，但了解之后会发现Linux真的很好玩很强大；其次补充一些很好用的指令。shell推荐使用zsh，自带的bash比较难用。">
-<meta property="og:updated_time" content="2017-10-10T09:18:04.952Z">
+<meta property="og:description" content="0mongoDB 是一个文档型数据库，在数据关系简单的情况下，可以通过文档内嵌，一些简单的数据关联写进同一个文档里，这种情况就比 MySQL 方便。那如果关系更加复杂的情况下，比如经常遇到的 user-post-comment 这种一对多，就用 populate 比较方便了">
+<meta property="og:updated_time" content="2018-03-12T07:46:20.505Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux/Ubuntu常用指令(二)">
-<meta name="twitter:description" content="0.写在前面Linux常用指令的第二篇文章，这次开头还是再讲一下Ubuntu的权限问题，一开始接触Linux权限的问题确实很坑爹，但了解之后会发现Linux真的很好玩很强大；其次补充一些很好用的指令。shell推荐使用zsh，自带的bash比较难用。">
+<meta name="twitter:title" content="mongoose关联查询">
+<meta name="twitter:description" content="0mongoDB 是一个文档型数据库，在数据关系简单的情况下，可以通过文档内嵌，一些简单的数据关联写进同一个文档里，这种情况就比 MySQL 方便。那如果关系更加复杂的情况下，比如经常遇到的 user-post-comment 这种一对多，就用 populate 比较方便了">
 
 
 
@@ -142,13 +142,13 @@
 </style>
 
 
-  <link rel="canonical" href="http://evankoo.obstacle.cn/Linux常用指令-二.html"/>
+  <link rel="canonical" href="http://evankoo.obstacle.cn/mongoose关联查询.html"/>
 
 
 
 
 
-  <title>Linux/Ubuntu常用指令(二) | Evan Koo</title>
+  <title>mongoose关联查询 | Evan Koo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -307,7 +307,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/Linux常用指令-二.html">
+    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/mongoose关联查询.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evan Koo">
@@ -328,7 +328,7 @@
             
             
               
-                Linux/Ubuntu常用指令(二)
+                mongoose关联查询
               
             
           </h2>
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-09T20:11:21+08:00">
-                2017-10-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T14:43:39+08:00">
+                2018-02-08
               </time>
             
 
@@ -366,8 +366,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/MongoDB/" itemprop="url" rel="index">
+                    <span itemprop="name">MongoDB</span>
                   </a>
                 </span>
 
@@ -385,8 +385,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/Linux常用指令-二.html#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="Linux常用指令-二.html" itemprop="commentsCount"></span>
+                <a href="/mongoose关联查询.html#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="mongoose关联查询.html" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -394,7 +394,7 @@
 
           
           
-             <span id="/Linux常用指令-二.html" class="leancloud_visitors" data-flag-title="Linux/Ubuntu常用指令(二)">
+             <span id="/mongoose关联查询.html" class="leancloud_visitors" data-flag-title="mongoose关联查询">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -422,50 +422,13 @@
       
 
       
-        <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0.写在前面"></a>0.写在前面</h1><p>Linux常用指令的第二篇文章，这次开头还是再讲一下Ubuntu的权限问题，一开始接触Linux权限的问题确实很坑爹，但了解之后会发现Linux真的很好玩很强大；其次补充一些很好用的指令。shell推荐使用zsh，自带的bash比较难用。<a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt install zsh</div></pre></td></tr></table></figure></p>
-<p>再安装上oh~my~zsh，终端就变得很好看很好用了。在这里推荐一篇安装oh~my~zsh的教程 -&gt; <a href="http://www.jianshu.com/p/9a5c4cb0452d" target="_blank" rel="external">点击进入教程</a></p>
-<h1 id="1-chmod"><a href="#1-chmod" class="headerlink" title="1.chmod"></a>1.chmod</h1><p>这条指令也是和权限相关，我们用 <code>ls -l</code> 或 <code>ll</code> 时，会看到列表前面有一串字符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ ls -l</div><div class="line">/*文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名*/</div><div class="line">drwxr-xr-x  14 root    root    4.0K 10月  9 20:07 code</div><div class="line">-rw-r--r--   1 root    root     141 6月  24 12:54 composer.json</div></pre></td></tr></table></figure>
-<p>其中，<strong>r 表示可读取，w 表示可写入，x 表示可执行，d表示这是一个目录</strong>，<br>一共有1+3+3+3个字符，权限主要看后面三组，这三组按顺序分别是owner(文件拥有者)，group(用户组)，other(其他用户，如访客)。</p>
-<p>那么怎么用chmod指令去控制权限？</p>
-<p>在Ubuntu中，r=4，w=2，x=1 </p>
-<blockquote>
-<p>rwx 对应4+2+1=7<br>rw- 对应4+2=6<br>r-x 对应4+1=5</p>
-</blockquote>
-<p>看到这里应该有点眉头了吧？用<code>sudo chmod 777 xxx</code>开放对所有用户所有权限，3个数字依次代表owner, group, other，数字本身也代表着权限开放程度。 </p>
-<h1 id="2-chown"><a href="#2-chown" class="headerlink" title="2. chown"></a>2. chown</h1><p>该指令和chmod类似，只不过是直接更改文件或文件夹所有者。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown xxx:groupA [-R] file</div></pre></td></tr></table></figure></p>
-<p>其中xxx是用户名，可为空，groupA为用户组。</p>
-<h1 id="3-ls"><a href="#3-ls" class="headerlink" title="3. ls"></a>3. ls</h1><p>这个指令没有放在第一篇文章是因为我觉得大家应该用的频率最高，也懂了就不讲了，有些参数不常用，在这里转发别人的吧，高频使用参数我加粗了。</p>
-<blockquote>
-<p><strong>-a: 显示所有档案及目录（ls内定将档案名或目录名称为“.”的视为影藏，不会列出）</strong><br>-A: 显示除影藏文件“.”和“..”以外的所有文件列表<br>-C: 多列显示输出结果。这是默认选项；<br>-F: 在每个输出项后追加文件的类型标识符，具体含义: “*”表示具有可执行权限的普通文件，“/”表示目录，“@”表示符号链接，“|”表示命令管道FIFO，“=”表示sockets套接字。当文件为普通文件时，不输出任何标识符；<br>-b: 将文件中的不可输出的字符以反斜线“”加字符编码的方式输出；<br>-c: 与“-lt”选项连用时，按照文件状态时间排序输出目录内容，排序的依据是文件的索引节点中的ctime字段。与“-l”选项连用时，则排序的一句是文件的状态改变时间；<br>-d: 仅显示目录名，而不显示目录下的内容列表。显示符号链接文件本身，而不显示其所指向的目录列表；<br>-f: 此参数的效果和同时指定“aU”参数相同，并关闭“lst”参数的效果；<br>-i: 显示文件索引节点号（inode）。一个索引节点代表一个文件；<br>–file-type: 与“-F”选项的功能相同，但是不显示“<em>”；<br><strong>-h:  人性化显示，比如大小会用K、M；</strong><br><strong>-l: 以长格式显示目录下的内容列表。输出的信息从左到右依次包括文件名，文件类型、权限模式、硬连接数、所有者、组、文件大小和文件的最后修改时间等；</strong><br>-m: 用“,”号区隔每个文件和目录的名称；<br>-n: 以用户识别码和群组识别码替代其名称；<br>-r: 以文件名反序排列并输出目录内容列表；<br>-s: 显示文件和目录的大小，以区块为单位；<br><em>*-t: 用文件和目录的更改时间排序；</em></em><br>-L: 如果遇到性质为符号链接的文件或目录，直接列出该链接所指向的原始文件或目录；<br>-R: 递归处理，将指定目录下的所有文件及子目录一并处理；<br>–full-time: 列出完整的日期与时间；<br>–color[=WHEN]: 使用不同的颜色高亮显示不同类型的。<br>来自:  <a href="http://man.linuxde.net/ls" target="_blank" rel="external">http://man.linuxde.net/ls</a></p>
-</blockquote>
-<h1 id="4-ln"><a href="#4-ln" class="headerlink" title="4. ln"></a>4. ln</h1><p>文件(夹)链接符号，分为硬链接和软链接两种。效果类似于创建一个快捷方式，不同目录下共享某一文件(夹)。</p>
-<blockquote>
-<p>-b或–backup: 删除，覆盖目标文件之前的备份；<br>-d或-F或——directory: 建立目录的硬连接；<br>-f或——force: 强行建立文件或目录的连接，不论文件或目录是否存在；<br>-i或——interactive: 覆盖既有文件之前先询问用户；<br>-n或–no-dereference: 把符号连接的目的目录视为一般文件；<br>-s或——symbolic: 对源文件建立符号连接，而非硬连接；<br>-S&lt;字尾备份字符串&gt;或–suffix=&lt;字尾备份字符串&gt;: 用”-b”参数备份目标文件后，备份文件的字尾会被加上一个备份字符串，预设的备份字符串是符号“~”，用户可通过“-S”参数来改变它；<br>-v或——verbose: 显示指令执行过程；<br>-V&lt;备份方式&gt;或–version-control=&lt;备份方式&gt;: 用“-b”参数备份目标文件后，备份文件的字尾会被加上一个备份字符串，这个字符串不仅可用“-S”参数变更，当使用“-V”参数&lt;备份方式&gt;指定不同备份方式时，也会产生不同字尾的备份字符串；<br>–help: 在线帮助；<br>–version: 显示版本信息。<br>来自: <a href="http://man.linuxde.net/ln" target="_blank" rel="external">http://man.linuxde.net/ln</a></p>
-</blockquote>
-<h2 id="硬链接和软链接有什么区别？"><a href="#硬链接和软链接有什么区别？" class="headerlink" title="硬链接和软链接有什么区别？"></a>硬链接和软链接有什么区别？</h2><ul>
-<li>原文件删除，软链不可访问，硬链还是可以，硬链相当于同时复制了一份。</li>
-<li>不能对目录创建硬链接，但可以创建软链接。</li>
-</ul>
-<h1 id="5-tar"><a href="#5-tar" class="headerlink" title="5. tar"></a>5. tar</h1><p>tar是Ubuntu自带的压缩指令，将文件压缩成tar格式，但是只会一个tar是不够的，如果不知道压缩参数，根本无法压缩。<br>常用参数如下:</p>
-<blockquote>
-<p>-c 创建一个tar压缩文件<br>-v 显示处理过程<br>-z 压缩成zip文档<br>-f 指定压缩文档名字，注意不要忘记加上文件后缀，tar不会帮你补充上去<br>-x 释放文件，解压参数<br>-C 解压到指定目录，不存在此目录则终止运行<br>示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tar -cvf fonts.tar fonts // 压缩</div><div class="line">tar -xvf fonts.tar -C tests</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>压缩文件时记住前面是压缩后的文件，后面是你需要压缩的文件(夹)。</p>
-<p>其他解压缩指令如rar/unrar，zip/unzip如要自己从apt另外安装。</p>
-<h1 id="6-终端快捷键"><a href="#6-终端快捷键" class="headerlink" title="6. 终端快捷键"></a>6. 终端快捷键</h1><p>指令想不出还有什么要说的了，说一下我常用的快捷键吧。</p>
-<ul>
-<li>Ctrl + a 快速回到行首</li>
-<li>Ctrl + e 快速回到行尾</li>
-<li>Ctrl + Shift + t 同一窗口内新建一个终端</li>
-<li>Ctrl + u 删除光标到行首内容</li>
-<li>Ctrl + r 查找输入指令历史</li>
-<li>Ctrl + d 关闭当前终端</li>
-<li>Ctrl + p 向上查看指令历史</li>
-<li>Ctrl + n 向下查看指令历史</li>
-<li>Ctrl + c 清屏</li>
-</ul>
-<p>就写到这里啦，以后有什么就补充。</p>
+        <h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>mongoDB 是一个文档型数据库，在数据关系简单的情况下，可以通过文档内嵌，一些简单的数据关联写进同一个文档里，<br>这种情况就比 MySQL 方便。那如果关系更加复杂的情况下，比如经常遇到的 user-post-comment 这种一对多，就用 <a href="http://mongoosejs.com/docs/populate.html" target="_blank" rel="external">populate</a> 比较方便了<br><a id="more"></a></p>
+<h1 id="1-Schema"><a href="#1-Schema" class="headerlink" title="1. Schema"></a>1. Schema</h1><p>以user-post 一对多为例<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>)</div><div class="line">mongoose.connect(<span class="string">'mongodb://localhost:27017/test'</span>);</div><div class="line"><span class="keyword">const</span> Shema = mongoose.Shema;</div><div class="line"><span class="keyword">const</span> ObjectId = Schema.Types.ObjectId; </div><div class="line"></div><div class="line"><span class="keyword">var</span> Post_Shema = <span class="keyword">new</span> Shema(&#123;</div><div class="line">    <span class="attr">user</span>: &#123;             <span class="comment">// post对应一个user</span></div><div class="line">        type: ObjectId, <span class="comment">// 保存的只是user的objectId</span></div><div class="line">        ref: <span class="string">'User'</span>     <span class="comment">// 关联User model, 此处省略User细节</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">comment</span>: [&#123;         <span class="comment">// post对应多个评论，故用数组</span></div><div class="line">        type: objectId, </div><div class="line">        <span class="attr">ref</span>: <span class="string">'Comment'</span>  <span class="comment">// 关联</span></div><div class="line">    &#125;]</div><div class="line">    ...</div><div class="line">&#125;)</div><div class="line"></div><div class="line">Post_Shema.index(&#123; <span class="attr">user</span>:<span class="number">1</span> &#125;) <span class="comment">// 设置索引，查询优化</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">'Post'</span>, Post_Shema); <span class="comment">// Shema绑定model</span></div><div class="line"></div><div class="line"><span class="built_in">module</span>.exposts = Post;</div></pre></td></tr></table></figure></p>
+<p>关于 Shema 部分就基本完成了。需要了解 Shema Model 之间的关系可参考 <a href="http://mongoosejs.com/docs/guide.html" target="_blank" rel="external">mongoose-Shema官方文档</a>。</p>
+<h1 id="2-使用populate"><a href="#2-使用populate" class="headerlink" title="2.使用populate"></a>2.使用populate</h1><p>model已经写好了，增删查改就非常方便了。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Post = <span class="built_in">require</span>(<span class="string">'./Post'</span>)</div><div class="line"></div><div class="line"><span class="keyword">async</span> () =&gt; &#123;</div><div class="line">    <span class="comment">// 省略了捕捉异常</span></div><div class="line">    <span class="keyword">var</span> post = <span class="keyword">await</span> Post.find([condition],... )</div><div class="line">        .populate([             <span class="comment">// 可传一个对象或对象数组</span></div><div class="line">            &#123;</div><div class="line">                <span class="attr">path</span>: <span class="string">'user'</span>,   <span class="comment">// post_schema 里的字段 已 ref 了 User model</span></div><div class="line">                select: <span class="string">'A B C'</span> <span class="comment">// 选择要显示的字段</span></div><div class="line">            &#125;,</div><div class="line">            ...</div><div class="line">        ]);</div><div class="line">    </div><div class="line">    <span class="built_in">console</span>.log(post);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>log 出来的数据可以发现是一份内嵌文档数组，使用 findByid 同理。需要注意的是 <strong>mongoDB在自动维护 CreatedAt 和 updatedAt 的字段时，采用的是格林威治时间</strong>，<br>我使用 <a href="http://momentjs.cn/" target="_blank" rel="external">moment</a> 来处理的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data.createdAt = moment(data.createdAt).format(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>); <span class="comment">// 格式化时间</span></div></pre></td></tr></table></figure>
+<h1 id="3-后记"><a href="#3-后记" class="headerlink" title="3.后记"></a>3.后记</h1><p>事实上，我花了比较长的时间去了解 mongoose 怎样去写，因为文档是全英的，需要仔细看，去理解。相比与之前用 mongoSkin， 再也不用担心瞎搞了，同时 mongoose 有相当完备的<br> Validation， 比较有利于维护。</p>
 
       
     </div>
@@ -494,7 +457,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://evankoo.obstacle.cn/Linux常用指令-二.html" title="Linux/Ubuntu常用指令(二)">http://evankoo.obstacle.cn/Linux常用指令-二.html</a>
+      <a href="http://evankoo.obstacle.cn/mongoose关联查询.html" title="mongoose关联查询">http://evankoo.obstacle.cn/mongoose关联查询.html</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -510,7 +473,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux-Ubuntu/" rel="tag"># Linux/Ubuntu</a>
+            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
+          
+            <a href="/tags/mongoDB/" rel="tag"># mongoDB</a>
           
         </div>
       
@@ -523,18 +488,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/越懒-罪恶感越强.html" rel="next" title="越懒,罪恶感越强?">
-                <i class="fa fa-chevron-left"></i> 越懒,罪恶感越强?
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Mongodb的基本操作.html" rel="prev" title="Mongodb的基本操作">
-                Mongodb的基本操作 <i class="fa fa-chevron-right"></i>
+              <a href="/Node读写xlsx.html" rel="prev" title="Node读写xlsx">
+                Node读写xlsx <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -704,7 +665,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-写在前面"><span class="nav-text">0.写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-chmod"><span class="nav-text">1.chmod</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-chown"><span class="nav-text">2. chown</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-ls"><span class="nav-text">3. ls</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-ln"><span class="nav-text">4. ln</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#硬链接和软链接有什么区别？"><span class="nav-text">硬链接和软链接有什么区别？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-tar"><span class="nav-text">5. tar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-终端快捷键"><span class="nav-text">6. 终端快捷键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0"><span class="nav-text">0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Schema"><span class="nav-text">1. Schema</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-使用populate"><span class="nav-text">2.使用populate</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-后记"><span class="nav-text">3.后记</span></a></li></ol></div>
             
 
           </div>
