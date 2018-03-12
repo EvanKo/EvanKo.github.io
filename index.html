@@ -426,7 +426,7 @@
 
       
         
-          <h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>mongoDB 是一个文档型数据库，在数据关系简单的情况下，可以通过文档内嵌，一些简单的数据关联写进同一个文档里，<br>这种情况就比 MySQL 方便。那如果关系更加复杂的情况下，比如经常遇到的 user-post-comment 这种一对多，就用 <a href="http://mongoosejs.com/docs/populate.html">populate</a> 比较方便了<br>
+          <h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>mongoDB 是一个文档型数据库，在数据关系简单的情况下，可以通过文档内嵌，一些简单的数据关联写进同一个文档里，这种情况就比 MySQL 方便。但是并不是所有情况都适合使用内嵌来解决， 一旦数据达到一定规模，查询起来是相当不便的。比如经常遇到的 user-post-comment 这种一对n多，就用 <a href="http://mongoosejs.com/docs/populate.html">populate</a> 比较方便了<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/mongoose关联查询.html#more" rel="contents">
