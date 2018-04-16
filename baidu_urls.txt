@@ -1,2 +1,2 @@
+http://evankoo.obstacle.cn/关于京东运维岗面试的一些总结.html
 http://evankoo.obstacle.cn/用栈进行进制转换和回文判断.html
-http://evankoo.obstacle.cn/mongoose关联查询.html
