@@ -1,2 +1,2 @@
-http://evankoo.obstacle.cn/Linux常用指令-三.html
-http://evankoo.obstacle.cn/关于京东运维岗面试的一些总结.html
+http://evankoo.obstacle.cn/CentOS7编译安装Nginx.html
+http://evankoo.obstacle.cn/Linux用户账号管理.html

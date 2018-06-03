@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://evankoo.obstacle.cn/Linux常用指令-三.html">
 <meta property="og:site_name" content="Evan Koo">
 <meta property="og:description" content="0进入京东运维组实习，收到了很多同事的热心指导，自己也努力学习，按照他们给出的学习计划，真的很充实，学到了很多不只是开发方面的知识。 以下简单记录下自己的笔记，方便以后查阅。">
-<meta property="og:updated_time" content="2018-06-03T15:28:10.774Z">
+<meta property="og:updated_time" content="2018-06-03T15:34:29.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用指令-三">
 <meta name="twitter:description" content="0进入京东运维组实习，收到了很多同事的热心指导，自己也努力学习，按照他们给出的学习计划，真的很充实，学到了很多不只是开发方面的知识。 以下简单记录下自己的笔记，方便以后查阅。">
@@ -478,6 +478,60 @@
 <li>a\ 行下追加</li>
 <li>i\ 行上追加</li>
 </ul>
+<h1 id="系统相关指令"><a href="#系统相关指令" class="headerlink" title="系统相关指令"></a>系统相关指令</h1><ul>
+<li>ps/ps aux 查看进程</li>
+<li>top 动态查看进程变化</li>
+<li>free 查看内存使用情况</li>
+<li>uname 查看系统与内核相关信息</li>
+<li>uptime 查看系统启动时间和工作负载</li>
+</ul>
+<h2 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h2><p>kill不仅仅可以杀掉进程，后面的参数也有意思, <code>kill -1 xxx</code></p>
+<table>
+<thead>
+<tr>
+<th>代号</th>
+<th>名称</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>SIGNUP</td>
+<td>启动被终止的进程，并重新读取配置文件，相当于重启</td>
+</tr>
+<tr>
+<td>2</td>
+<td>SIGINT</td>
+<td>相当于 ctrl c 终止进程</td>
+</tr>
+<tr>
+<td>9</td>
+<td>SIGKILL</td>
+<td>强制终端进程进行，如果进程进行到一半，未完成的部分会有“半成品”产生，比如 vim 的 swap文件</td>
+</tr>
+<tr>
+<td>15</td>
+<td>SIGTERM</td>
+<td>以正常方式结束进程</td>
+</tr>
+<tr>
+<td>17</td>
+<td>SIGSTOP</td>
+<td>相当于 ctrl z 暂停进程</td>
+</tr>
+</tbody>
+</table>
+<h2 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h2><p>查看网络情况</p>
+<p>参数</p>
+<ul>
+<li>-a 列出所有连接、监听、socket</li>
+<li>-t 列出 TCP 网络数据包的数据</li>
+<li>-u 列出 UDP 的</li>
+<li>-n 不列出进程，以端口号显示</li>
+<li>-l 列出正在监听的服务</li>
+<li>-p 列出进程 pid</li>
+</ul>
 
       
     </div>
@@ -534,6 +588,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/Linux用户账号管理.html" rel="next" title="Linux用户账号管理">
+                <i class="fa fa-chevron-left"></i> Linux用户账号管理
+              </a>
             
           </div>
 
@@ -617,7 +675,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -628,7 +686,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -639,7 +697,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -712,7 +770,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0"><span class="nav-text">0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-文件系统"><span class="nav-text">1.文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬连接和符号连接的区别"><span class="nav-text">硬连接和符号连接的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘相关"><span class="nav-text">磁盘相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩解压"><span class="nav-text">压缩解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本流处理"><span class="nav-text">文本流处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-shell"><span class="nav-text">2 shell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的删除、替换"><span class="nav-text">变量的删除、替换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#和"><span class="nav-text"># 和 #\</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-text">% / %%</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#替换"><span class="nav-text">替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-和-gt-gt"><span class="nav-text">> 和 >></span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-awk-sed"><span class="nav-text">3 awk sed</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0"><span class="nav-text">0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-文件系统"><span class="nav-text">1.文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬连接和符号连接的区别"><span class="nav-text">硬连接和符号连接的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘相关"><span class="nav-text">磁盘相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩解压"><span class="nav-text">压缩解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本流处理"><span class="nav-text">文本流处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-shell"><span class="nav-text">2 shell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的删除、替换"><span class="nav-text">变量的删除、替换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#和"><span class="nav-text"># 和 #\</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-text">% / %%</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#替换"><span class="nav-text">替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-和-gt-gt"><span class="nav-text">> 和 >></span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-awk-sed"><span class="nav-text">3 awk sed</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统相关指令"><span class="nav-text">系统相关指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#kill"><span class="nav-text">kill</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#netstat"><span class="nav-text">netstat</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -745,7 +803,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">博客全站共12.5k字</span>
+  <span class="post-count">博客全站共14.7k字</span>
 </div>
 
         

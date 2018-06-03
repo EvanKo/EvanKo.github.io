@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux/Ubuntu," />
 
 
 
@@ -90,15 +90,17 @@
 
 
 
-<meta name="description" content="step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Evan Koo">
-<meta property="og:url" content="http://evankoo.obstacle.cn/archives/2018/01/index.html">
+<meta name="description" content="帐号管理Linux 用户管理文件主要涉及 /etc/passwd、/etc/shadow，用户组管理在/etc/group、/etc/gshadow。 每个用户都有一个 UID 和 GID，Linux登录时不会直接用用户名和密码直接对比，而是先找到UID与用户名的映射，再去对比密码。一般来说，0为 root 帐号，1~500 是系统帐号，500 以后是用户帐号。">
+<meta name="keywords" content="Linux/Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux用户账号管理">
+<meta property="og:url" content="http://evankoo.obstacle.cn/Linux用户账号管理.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="step by step">
+<meta property="og:description" content="帐号管理Linux 用户管理文件主要涉及 /etc/passwd、/etc/shadow，用户组管理在/etc/group、/etc/gshadow。 每个用户都有一个 UID 和 GID，Linux登录时不会直接用用户名和密码直接对比，而是先找到UID与用户名的映射，再去对比密码。一般来说，0为 root 帐号，1~500 是系统帐号，500 以后是用户帐号。">
+<meta property="og:updated_time" content="2018-06-03T15:39:43.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Evan Koo">
-<meta name="twitter:description" content="step by step">
+<meta name="twitter:title" content="Linux用户账号管理">
+<meta name="twitter:description" content="帐号管理Linux 用户管理文件主要涉及 /etc/passwd、/etc/shadow，用户组管理在/etc/group、/etc/gshadow。 每个用户都有一个 UID 和 GID，Linux登录时不会直接用用户名和密码直接对比，而是先找到UID与用户名的映射，再去对比密码。一般来说，0为 root 帐号，1~500 是系统帐号，500 以后是用户帐号。">
 
 
 
@@ -140,13 +142,13 @@
 </style>
 
 
-  <link rel="canonical" href="http://evankoo.obstacle.cn/archives/2018/01/"/>
+  <link rel="canonical" href="http://evankoo.obstacle.cn/Linux用户账号管理.html"/>
 
 
 
 
 
-  <title>归档 | Evan Koo</title>
+  <title>Linux用户账号管理 | Evan Koo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -181,7 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,103 +297,288 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 24 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Node读写xlsx.html" itemprop="url">
-              
-                <span itemprop="name">Node读写xlsx</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-29T10:55:53+08:00"
-              content="2018-01-29" >
-          01-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/express-mongoose-的使用.html" itemprop="url">
-              
-                <span itemprop="name">express + mongoose 的使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-18T11:16:17+08:00"
-              content="2018-01-18" >
-          01-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/Linux用户账号管理.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan Koo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oox5stmf1.bkt.clouddn.com/1932806867.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Evan Koo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                Linux用户账号管理
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T20:42:15+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/Linux用户账号管理.html#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="Linux用户账号管理.html" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/Linux用户账号管理.html" class="leancloud_visitors" data-flag-title="Linux用户账号管理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="帐号管理"><a href="#帐号管理" class="headerlink" title="帐号管理"></a>帐号管理</h1><p>Linux 用户管理文件主要涉及 /etc/passwd、/etc/shadow，用户组管理在/etc/group、/etc/gshadow。</p>
+<p>每个用户都有一个 UID 和 GID，Linux登录时不会直接用用户名和密码直接对比，而是先找到UID与用户名的映射，再去对比密码。一般来说，0为 root 帐号，1~500 是系统帐号，500 以后是用户帐号。<br><a id="more"></a></p>
+<h2 id="1-etc-passwd"><a href="#1-etc-passwd" class="headerlink" title="1 /etc/passwd"></a>1 /etc/passwd</h2><p>这个文件名字虽然是 passwd，但是为了安全，早已不再储存用户的密码。</p>
+<p>每行的结构如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 1 :2:3:4:  5 : 6   :   6</span></div><div class="line">root:x:0:0:root:/root:/bin/bash</div><div class="line">bin:x:1:1:bin:/bin:/sbin/nologin</div><div class="line">daemon:x:2:2:daemon:/sbin:/sbin/nologin</div></pre></td></tr></table></figure>
+<p>以第一行 root… 为例：</p>
+<ol>
+<li>用户名</li>
+<li>密码，现在都为 x，密码编码加密后储存在 /etc/shadow 里面</li>
+<li>UID</li>
+<li>GID</li>
+<li>备注说明</li>
+<li>用户的主文件夹</li>
+<li>默认的 shell</li>
+</ol>
+<h2 id="2-etc-shadow"><a href="#2-etc-shadow" class="headerlink" title="2 /etc/shadow"></a>2 /etc/shadow</h2><p>这里主要储存这用户密码，以及密码配置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 1 ：2               ：3   ：4：5  ：6：7：8：9</span></div><div class="line">root:dfaDasd/asd.hqo00:14126:0:99999:7:::</div></pre></td></tr></table></figure>
+<p>结构功能如下：</p>
+<ol>
+<li>账户名</li>
+<li>编码加密后的密码</li>
+<li>最近密码变动的日期，日 时间戳</li>
+<li>密码不可变动天数，0即随时可以改密码</li>
+<li>密码需要重新改动的天数，即在新建或更改密码时，需要多少天重置密码</li>
+<li>需要更改前的警告，登录时系统会在更改期限前x天提示更改密码</li>
+<li>密码过期后的宽限日期，过期后x天重新登录仍有效，但是必须更改密码</li>
+<li>帐号失效日期</li>
+<li>保留字段</li>
+</ol>
+<h2 id="3-etc-group"><a href="#3-etc-group" class="headerlink" title="3 /etc/group"></a>3 /etc/group</h2><p>与 paswwd 文件类似，储存的是组的信息，但是若一个用户有多个用户组，会区分有效用户组和初始用户组。</p>
+<p>初始用户组顾名思义，登陆时的用户组权限，有效用户组即可使用 <code>newgrp</code> 这个指令切换，可用 <code>groups</code> 这个指令查看所属几个用户组。</p>
+<h2 id="4-etc-gshadow"><a href="#4-etc-gshadow" class="headerlink" title="4 /etc/gshadow"></a>4 /etc/gshadow</h2><p>与 shadow 文件类似，但是对于组来说，多了一个用户组管理员的概念</p>
+<h2 id="5-用户帐号管理指令"><a href="#5-用户帐号管理指令" class="headerlink" title="5 用户帐号管理指令"></a>5 用户帐号管理指令</h2><p>不能对上述几个文件之间 vim 操作，因此 Linux 封装了指令。</p>
+<h3 id="useradd"><a href="#useradd" class="headerlink" title="useradd"></a>useradd</h3><p>主要参数</p>
+<ul>
+<li>-s 指定用户登录后的shell</li>
+<li>-c 用户描述备注</li>
+<li>-G 选择加入的组</li>
+<li>-m 创建用户帐号时创建用户目录，此项为默认参数，默认用户目录的权限是700</li>
+<li>-M 不创建用户目录</li>
+</ul>
+<p>添加用户的常规操作，不添加参数的缺省模版在 /etc/default/useradd 。用户主文件夹缺省模版在  /etc/skel 。密码参数参考 /etc/login.defs</p>
+<h3 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h3><p>创建用户后，是没有设置好密码的，也就是说新帐号会被暂时封锁，直到使用了 passwd 设置好密码才允许新帐号登录。</p>
+<p>参数： </p>
+<ul>
+<li>–stdin 标准输入，可结合前面指令利用管道符作为密码输入</li>
+<li>-l Lock，在shadow 密码列前加上 ! ，即密码失效</li>
+<li>-u unlock</li>
+<li>-n 对应shadow 第4列，多久不可改动密码</li>
+<li>-x 对应第5列， 多久内必须修改密码</li>
+<li>-w 对应第6列，密码过期前的警告天数</li>
+<li>-i 对应第7列，密码失效时期</li>
+</ul>
+<p>passwd 现在会调用 PAM 模块来校验密码</p>
+<p>更详细的使用可用指令 chage -l 或 passwd -S</p>
+<h3 id="usermod"><a href="#usermod" class="headerlink" title="usermod"></a>usermod</h3><p>user modify， 调整已有用户帐号信息，参数和 useradd 相似</p>
+<h3 id="userdel"><a href="#userdel" class="headerlink" title="userdel"></a>userdel</h3><p>删除用户操作，一般不会删除用户目录，参数 -r 会连用户目录一起删除。</p>
+<h3 id="finger"><a href="#finger" class="headerlink" title="finger"></a>finger</h3><p>非敏感用户数据参数的修改。</p>
+<h3 id="chsh"><a href="#chsh" class="headerlink" title="chsh"></a>chsh</h3><p>切换用户的shell</p>
+<h2 id="6-用户组管理"><a href="#6-用户组管理" class="headerlink" title="6 用户组管理"></a>6 用户组管理</h2><ul>
+<li>groupadd 新建用户组</li>
+<li>groupmod 与 usermod 类似</li>
+<li>groupdel 删除用户组，删除前确保 GID 没有关联任意 GID</li>
+</ul>
+<h3 id="gpasswd"><a href="#gpasswd" class="headerlink" title="gpasswd"></a>gpasswd</h3><p>将用户加入用户组，设置组密码，或新建用户组管理员<br>不带参数默认给与 group 一个密码。<br>参数</p>
+<ul>
+<li>-A 设置管理员</li>
+<li>-M 把某个用户加入某个用户组</li>
+<li>-r 删除用户组密码</li>
+<li>-R 组密码失效</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Evan Koo
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://evankoo.obstacle.cn/Linux用户账号管理.html" title="Linux用户账号管理">http://evankoo.obstacle.cn/Linux用户账号管理.html</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux-Ubuntu/" rel="tag"># Linux/Ubuntu</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CentOS7编译安装Nginx.html" rel="next" title="CentOS7编译安装Nginx">
+                <i class="fa fa-chevron-left"></i> CentOS7编译安装Nginx
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Linux常用指令-三.html" rel="prev" title="Linux常用指令-三">
+                Linux常用指令-三 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -399,6 +586,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -418,8 +611,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://oox5stmf1.bkt.clouddn.com/1932806867.jpg"
@@ -519,6 +721,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#帐号管理"><span class="nav-text">帐号管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-etc-passwd"><span class="nav-text">1 /etc/passwd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-etc-shadow"><span class="nav-text">2 /etc/shadow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-etc-group"><span class="nav-text">3 /etc/group</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-etc-gshadow"><span class="nav-text">4 /etc/gshadow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-用户帐号管理指令"><span class="nav-text">5 用户帐号管理指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#useradd"><span class="nav-text">useradd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#passwd"><span class="nav-text">passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usermod"><span class="nav-text">usermod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#userdel"><span class="nav-text">userdel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finger"><span class="nav-text">finger</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chsh"><span class="nav-text">chsh</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-用户组管理"><span class="nav-text">6 用户组管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gpasswd"><span class="nav-text">gpasswd</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -652,11 +870,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   

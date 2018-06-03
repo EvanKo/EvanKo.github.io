@@ -4,8 +4,68 @@
 
     
   <url>
+      <loc>http://evankoo.obstacle.cnsvn%E7%AC%94%E8%AE%B0.html</loc>
+    <lastmod>2018-06-03T15:41:22.824Z</lastmod>
+    <data>
+        <display>
+        <title>SVN笔记</title>
+        <pubTime>2017-12-17T07:01:35.000Z</pubTime>
+        
+        <tag>SVN</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://evankoo.obstacle.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+      <loc>http://evankoo.obstacle.cnLinux%E7%94%A8%E6%88%B7%E8%B4%A6%E5%8F%B7%E7%AE%A1%E7%90%86.html</loc>
+    <lastmod>2018-06-03T15:39:43.071Z</lastmod>
+    <data>
+        <display>
+        <title>Linux用户账号管理</title>
+        <pubTime>2018-05-10T12:42:15.000Z</pubTime>
+        
+        <tag>Linux/Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://evankoo.obstacle.cn/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+      <loc>http://evankoo.obstacle.cnCentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85Nginx.html</loc>
+    <lastmod>2018-06-03T15:39:13.611Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7编译安装Nginx</title>
+        <pubTime>2018-05-16T14:05:35.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="Ngxin" url="http://evankoo.obstacle.cn/categories/Ngxin/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
       <loc>http://evankoo.obstacle.cnLinux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4-%E4%B8%89.html</loc>
-    <lastmod>2018-06-03T15:28:10.774Z</lastmod>
+    <lastmod>2018-06-03T15:34:29.851Z</lastmod>
     <data>
         <display>
         <title>Linux常用指令-三</title>
