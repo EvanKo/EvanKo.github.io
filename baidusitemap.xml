@@ -4,6 +4,26 @@
 
     
   <url>
+      <loc>http://evankoo.obstacle.cnCentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85Nginx.html</loc>
+    <lastmod>2018-06-03T15:48:49.088Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7编译安装Nginx</title>
+        <pubTime>2018-05-16T14:05:35.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="Nginx" url="http://evankoo.obstacle.cn/categories/Nginx/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
       <loc>http://evankoo.obstacle.cnsvn%E7%AC%94%E8%AE%B0.html</loc>
     <lastmod>2018-06-03T15:41:22.824Z</lastmod>
     <data>
@@ -37,26 +57,6 @@
            
              
               <breadCrumb title="Linux" url="http://evankoo.obstacle.cn/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-      <loc>http://evankoo.obstacle.cnCentOS7%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85Nginx.html</loc>
-    <lastmod>2018-06-03T15:39:13.611Z</lastmod>
-    <data>
-        <display>
-        <title>CentOS7编译安装Nginx</title>
-        <pubTime>2018-05-16T14:05:35.000Z</pubTime>
-        
-        <tag>Nginx</tag>
-         
-         
-           
-             
-              <breadCrumb title="Ngxin" url="http://evankoo.obstacle.cn/categories/Ngxin/"/>
           
         </display>
     </data>
