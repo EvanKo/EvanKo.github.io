@@ -1,2 +1,2 @@
+http://evankoo.obstacle.cn/设计模式-三观察者适配器.html
 http://evankoo.obstacle.cn/CentOS7编译安装Nginx.html
-http://evankoo.obstacle.cn/Linux用户账号管理.html
