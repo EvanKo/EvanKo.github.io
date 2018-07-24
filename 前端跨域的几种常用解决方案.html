@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="0 跨域造成跨域是因为浏览器的同源策略，不允许js去请求不在同一个域下的资源，即使是localhost，这是防止XSS攻击的第一道防线(?)。（img标签除外，所以img也成了xss攻击的常用跳板方式） 1.jsonp原理: script 标签不受同源策略的影响 需要后端接口返回一个回调函数，前端在回调函数做数据处理 1234567891011121314&amp;lt;script&amp;gt;    var">
+<meta name="description" content="0 跨域造成跨域是因为浏览器的同源策略，不允许js去请求不在同一个域下的资源，即使是localhost，这是防止XSS攻击的第一道防线(?)。（img标签除外，所以img也成了xss攻击的常用跳板方式）">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端跨域的几种常用解决方案">
 <meta property="og:url" content="http://evankoo.obstacle.cn/前端跨域的几种常用解决方案.html">
 <meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="0 跨域造成跨域是因为浏览器的同源策略，不允许js去请求不在同一个域下的资源，即使是localhost，这是防止XSS攻击的第一道防线(?)。（img标签除外，所以img也成了xss攻击的常用跳板方式） 1.jsonp原理: script 标签不受同源策略的影响 需要后端接口返回一个回调函数，前端在回调函数做数据处理 1234567891011121314&amp;lt;script&amp;gt;    var">
-<meta property="og:updated_time" content="2018-07-24T15:10:04.705Z">
+<meta property="og:description" content="0 跨域造成跨域是因为浏览器的同源策略，不允许js去请求不在同一个域下的资源，即使是localhost，这是防止XSS攻击的第一道防线(?)。（img标签除外，所以img也成了xss攻击的常用跳板方式）">
+<meta property="og:updated_time" content="2018-07-24T15:15:55.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端跨域的几种常用解决方案">
-<meta name="twitter:description" content="0 跨域造成跨域是因为浏览器的同源策略，不允许js去请求不在同一个域下的资源，即使是localhost，这是防止XSS攻击的第一道防线(?)。（img标签除外，所以img也成了xss攻击的常用跳板方式） 1.jsonp原理: script 标签不受同源策略的影响 需要后端接口返回一个回调函数，前端在回调函数做数据处理 1234567891011121314&amp;lt;script&amp;gt;    var">
+<meta name="twitter:description" content="0 跨域造成跨域是因为浏览器的同源策略，不允许js去请求不在同一个域下的资源，即使是localhost，这是防止XSS攻击的第一道防线(?)。（img标签除外，所以img也成了xss攻击的常用跳板方式）">
 
 
 
@@ -423,6 +423,7 @@
 
       
         <h1 id="0-跨域"><a href="#0-跨域" class="headerlink" title="0 跨域"></a>0 跨域</h1><p>造成跨域是因为浏览器的同源策略，不允许js去请求不在同一个域下的资源，即使是localhost，这是防止XSS攻击的第一道防线(?)。（img标签除外，所以img也成了xss攻击的常用跳板方式）</p>
+<a id="more"></a>
 <h1 id="1-jsonp"><a href="#1-jsonp" class="headerlink" title="1.jsonp"></a>1.jsonp</h1><p>原理: script 标签不受同源策略的影响</p>
 <p>需要后端接口返回一个回调函数，前端在回调函数做数据处理</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    var script = document.createElement('script');</div><div class="line">    script.type = 'text/javascript';</div><div class="line">    // 传参并指定回调执行函数为onBack</div><div class="line">    script.src = 'http://www.domain2.com:8080/login?user=admin&amp;callback=onBack';</div><div class="line">    document.head.appendChild(script);</div><div class="line">    // 回调执行函数</div><div class="line">    function onBack(res) &#123;</div><div class="line">        alert(JSON.stringify(res));</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">// 后端返回</div><div class="line">// onBack(&#123;"status": true, "user": "admin"&#125;)</div></pre></td></tr></table></figure>
