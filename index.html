@@ -426,9 +426,7 @@
 
       
         
-          <h1 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h1><p>socket 就是TCP/IP的抽象层，当我们使用 socket 编程时，可以不用担心TCP/IP协议簇的实现过程。</p>
-<p>c++ 中相关的结构体</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr</span> &#123;</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> sa_family;</div><div class="line">    <span class="keyword">char</span> sa_data[<span class="number">14</span>]; <span class="comment">// 14字节协议地址</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">/* Internet 地址 (一个与历史有关的结构) */</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> &#123;</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> s_addr;</div><div class="line">&#125;;</div><div class="line"><span class="comment">// 主要用到下面这个</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> &#123;</span></div><div class="line">    <span class="keyword">short</span> <span class="keyword">int</span> sin_family; <span class="comment">// 通信类型</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="keyword">int</span> sin_port; <span class="comment">// 端口</span></div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> <span class="title">sin_addr</span>;</span> <span class="comment">// Internet 地址</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> sin_zero[<span class="number">8</span>]; <span class="comment">// 与sockaddr结构的长度相同</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+          <h1 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h1><p>socket 就是TCP/IP的抽象层，当我们使用 socket 编程时，可以不用担心TCP/IP协议簇的实现过程。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/c-socket-通讯的简单实现.html#more" rel="contents">
@@ -2468,6 +2466,9 @@
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.1"></script>
+
 
   
 
