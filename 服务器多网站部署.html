@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://evankoo.obstacle.cn/服务器多网站部署.html">
 <meta property="og:site_name" content="Evan Koo">
 <meta property="og:description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
-<meta property="og:updated_time" content="2017-10-09T14:23:11.042Z">
+<meta property="og:updated_time" content="2018-07-28T08:25:13.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器多网站部署">
 <meta name="twitter:description" content="0. 写在前面服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。 我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。">
@@ -424,8 +424,11 @@
       
         <h1 id="0-写在前面"><a href="#0-写在前面" class="headerlink" title="0. 写在前面"></a>0. 写在前面</h1><p>服务器如果直部署一个网站，资源有点浪费，可以利用nginx的反向代理来部署多个网站。</p>
 <p>我们知道，80端口只有一个，在浏览器输入域名，默认访问的是80端口。如果我们分配其他端口给该域名，那么域名后面要加上端口号才能正访问，这就非常不方便了，而且难看。<br><a id="more"></a></p>
-<h1 id="1-什么是反向代理？"><a href="#1-什么是反向代理？" class="headerlink" title="1. 什么是反向代理？"></a>1. 什么是反向代理？</h1><p>简单来说，就是<strong>转发请求</strong>。</p>
-<p>将该域名80端口的请求转发到另外一个端口上，就能实现多个域名”占用了一个端口”，直接输入域名即可，不再需要端口号。</p>
+<h1 id="1-什么是反向代理？"><a href="#1-什么是反向代理？" class="headerlink" title="1. 什么是反向代理？"></a>1. 什么是反向代理？</h1><p><del>简单来说，就是<strong>转发请求</strong></del>。</p>
+<p>2018.02.02 更正</p>
+<p>反向代理，即客户端进行访问时因为经过了nginx的请求转发，对客户端而言并不知道“真实”访问的地址；正向代理就是客户端使用了一个代理地址，帮助客户端发出请求，而服务端会以为请求来自代理节点。</p>
+<p><del>将该域名80端口的请求转发到另外一个端口上，就能实现多个域名”占用了一个端口”，直接输入域名即可，不再需要端口号。</del></p>
+<p>实际上也并不一定这么做，只需在server_name添加域名即可，因为nginx处理请求时，先处理请求头，再交由handler、filter处理，最后才对，只要确保location作用域能正确处理不同请求即可。</p>
 <h1 id="2-nginx配置示例"><a href="#2-nginx配置示例" class="headerlink" title="2. nginx配置示例"></a>2. nginx配置示例</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen 80;          </div><div class="line">        server_name domain_name;</div><div class="line"></div><div class="line">        location / &#123; </div><div class="line">                proxy_pass http://localhost:8996; </div><div class="line">                proxy_set_header Host $host:$server_port;</div><div class="line">                proxy_set_header X-Real-IP $remote_addr;</div><div class="line">                proxy_set_header REMOTE-HOST $remote_addr;</div><div class="line">                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</div><div class="line">        &#125;   </div><div class="line"># 转发到此端口</div><div class="line">server &#123;</div><div class="line">        listen 8996;    </div><div class="line"></div><div class="line">        root /var/www/activity;</div><div class="line">        index index.php index.html;</div><div class="line">        # Make site accessible from http://localhost/</div><div class="line">        server_name localhost;  </div><div class="line">        // other conf</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
 <h1 id="附语法"><a href="#附语法" class="headerlink" title="附语法"></a>附语法</h1><blockquote>
 <p>语法规则:<br>location [=|~|~*|^~] /uri/ { … } <br></p>
@@ -438,7 +441,8 @@
 <li>/  通用匹配，任何请求都会匹配到。 <br></li>
 </ul>
 </blockquote>
-<p>首先匹配 =，其次匹配^~, 其次是按文件中顺序的正则匹配，最后是交给 / 通用匹配。当有匹配成功时候，停止匹配，按当前匹配规则处理请求。</p>
+<p>首先匹配 =，其次匹配^~, 其次是按文件中顺序的正则匹配，最后是交给 / 通用匹配。当有匹配成功时候，停止匹配，按当前匹配规则处理请求。 -&gt;这是默认情况</p>
+<p>当有last关键字时，会按照rewirte后的url重新发起一次http请求，再次匹配location；而break会停止匹配下一个location，handler不会停止执行。</p>
 
       
     </div>
@@ -710,7 +714,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">博客全站共20.2k字</span>
+  <span class="post-count">博客全站共20.4k字</span>
 </div>
 
         
