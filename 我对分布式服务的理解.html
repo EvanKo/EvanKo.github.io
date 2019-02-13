@@ -90,20 +90,17 @@
 
 
 
-<meta name="description" content="上一篇文章是已经是10月9日，现在是12月17日。 这两个月来发生了很多事，都没有记录下来，主要是懒。 打开了一下自己的博客，是时候写些东西啦，什么也好，缓解一下自己的偷懒的罪恶感！">
+<meta name="description" content="什么是分布式服务分布式服务是一种技术架构，将相同数据或程序分散到多台服务器上，并且内部架构对外透明。对于分布式服务中的单台机器来说，一般称之为节点（node)。NoSQL 服务在此应用尤其广泛。 以 MongoDB 为例解释分布式：若运行 Mongo 单例，仅由 mongod 一个主进程提供对外服务，在高并发的场景下，一旦进程挂了服务就处于完全瘫痪的状态中。因此，MongoDB 强大的高可用特性–">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="越懒,罪恶感越强?">
-<meta property="og:url" content="http://evankoo.obstacle.cn/越懒-罪恶感越强.html">
-<meta property="og:site_name" content="Evan Koo">
-<meta property="og:description" content="上一篇文章是已经是10月9日，现在是12月17日。 这两个月来发生了很多事，都没有记录下来，主要是懒。 打开了一下自己的博客，是时候写些东西啦，什么也好，缓解一下自己的偷懒的罪恶感！">
-<meta property="og:image" content="http://image.obstacle.cn/1535870588.jpg">
-<meta property="og:image" content="http://image.obstacle.cn/1702320299.jpg">
-<meta property="og:updated_time" content="2018-10-27T05:01:57.362Z">
+<meta property="og:title" content="我对分布式服务的理解">
+<meta property="og:url" content="http://evankoo.obstacle.cn/我对分布式服务的理解.html">
+<meta property="og:site_name" content="古毅">
+<meta property="og:description" content="什么是分布式服务分布式服务是一种技术架构，将相同数据或程序分散到多台服务器上，并且内部架构对外透明。对于分布式服务中的单台机器来说，一般称之为节点（node)。NoSQL 服务在此应用尤其广泛。 以 MongoDB 为例解释分布式：若运行 Mongo 单例，仅由 mongod 一个主进程提供对外服务，在高并发的场景下，一旦进程挂了服务就处于完全瘫痪的状态中。因此，MongoDB 强大的高可用特性–">
+<meta property="og:updated_time" content="2019-02-13T16:31:05.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越懒,罪恶感越强?">
-<meta name="twitter:description" content="上一篇文章是已经是10月9日，现在是12月17日。 这两个月来发生了很多事，都没有记录下来，主要是懒。 打开了一下自己的博客，是时候写些东西啦，什么也好，缓解一下自己的偷懒的罪恶感！">
-<meta name="twitter:image" content="http://image.obstacle.cn/1535870588.jpg">
+<meta name="twitter:title" content="我对分布式服务的理解">
+<meta name="twitter:description" content="什么是分布式服务分布式服务是一种技术架构，将相同数据或程序分散到多台服务器上，并且内部架构对外透明。对于分布式服务中的单台机器来说，一般称之为节点（node)。NoSQL 服务在此应用尤其广泛。 以 MongoDB 为例解释分布式：若运行 Mongo 单例，仅由 mongod 一个主进程提供对外服务，在高并发的场景下，一旦进程挂了服务就处于完全瘫痪的状态中。因此，MongoDB 强大的高可用特性–">
 
 
 
@@ -145,13 +142,13 @@
 </style>
 
 
-  <link rel="canonical" href="http://evankoo.obstacle.cn/越懒-罪恶感越强.html"/>
+  <link rel="canonical" href="http://evankoo.obstacle.cn/我对分布式服务的理解.html"/>
 
 
 
 
 
-  <title>越懒,罪恶感越强? | Evan Koo</title>
+  <title>我对分布式服务的理解 | 古毅</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -197,12 +194,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Evan Koo</span>
+        <span class="site-title">古毅</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">希望生活慢一些</h1>
+        <h1 class="site-subtitle" itemprop="description">不积跬步，无以至千里</h1>
       
   </div>
 
@@ -262,16 +259,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-board">
-          <a href="/board" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
-            
-            留言
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
@@ -310,16 +297,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/越懒-罪恶感越强.html">
+    <link itemprop="mainEntityOfPage" href="http://evankoo.obstacle.cn/我对分布式服务的理解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Evan Koo">
+      <meta itemprop="name" content="古毅">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://image.obstacle.cn/1932806867.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Evan Koo">
+      <meta itemprop="name" content="古毅">
     </span>
 
     
@@ -331,7 +318,7 @@
             
             
               
-                越懒,罪恶感越强?
+                我对分布式服务的理解
               
             
           </h2>
@@ -346,8 +333,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-17T15:01:35+08:00">
-                2017-12-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T21:33:45+08:00">
+                2018-11-12
               </time>
             
 
@@ -357,47 +344,14 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/越懒-罪恶感越强.html#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="越懒-罪恶感越强.html" itemprop="commentsCount"></span>
-                </a>
-              
             
           
 
           
           
-             <span id="/越懒-罪恶感越强.html" class="leancloud_visitors" data-flag-title="越懒,罪恶感越强?">
+             <span id="/我对分布式服务的理解.html" class="leancloud_visitors" data-flag-title="我对分布式服务的理解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -425,20 +379,15 @@
       
 
       
-        <p>上一篇文章是已经是10月9日，现在是12月17日。</p>
-<p>这两个月来发生了很多事，都没有记录下来，主要是懒。</p>
-<p>打开了一下自己的博客，是时候写些东西啦，什么也好，缓解一下自己的偷懒的罪恶感！<br><a id="more"></a><br>10月中旬，因为某个重要的会议，校园网对外网关闭，导致wegdut小程序后台接口失效，想了很久没想到什么对策甚至公告来告诉正在使用的同学们（毕竟日活1k+),想想就对不住<br>那一千人，于是编了个开发不力暂停服务的锅甩了给自己。后来跟学校的教务处谈过，无济于事。发布时承诺的“我们负责维护，不会夭折”，这个牛吹大了，惭愧。<br>不过，一边写代码，一边看直播还是很过瘾的。</p>
-<p><img src="http://image.obstacle.cn/1535870588.jpg" width="75%" height="75%"></p>
-<p>10月下旬，开学的第二个月快结束了，突然就得知数据挖掘即将考试，才发现课堂上并没有好好听课，对聚类算法一知半解，到考试前一个星期才慌忙复习。<br>不过这个老师讲课确实有点困啊，确实学不到什么东西。最后还好，考试应该不会挂的！</p>
-<p>11月11日，这个日子就厉害了，10号刚考完一个试，晚上浪到3、4点，早上11点半才起床。收到了来自工作室女生的surprise，虽然她们都叫我重做哥，但是我还是挺高兴的。<br>不不不，这是广工的男生节，光棍节我才不想过，还不知道哪年能够实现。。</p>
-<p><img src="http://image.obstacle.cn/1702320299.jpg" width="75%" height="75%"></p>
-<p>然后，当天，我竟然发烧了。就是那天开始，身体一天不如一天/滑稽。</p>
-<p>于是，工作室的运营组招新工作我并没有过多的参与，我也觉得时候锻炼一下大二的师弟师妹了。</p>
-<p>跑完体测1000米更加要命，简直想晕，又冷又饿。</p>
-<p>于是，顺利的，我又感冒了。花了我3、4个星期，才完全好。</p>
-<p>更加棘手的问题出现了，学校封了我服务器ip，wegdut再次失效。除了使用ip代理外，已经没有什么办法了。我又开始懒了，很多时候都不想再维护这个东西了，不难，但是很繁琐。<br>想了想，已经12月了，距离春招也只有3个多月，我还没有准备好，一点也没有，甚至说好的重构一个书籍搜索网站，也失败了。</p>
-<p><strong>想的永远比说的容易。</strong>现在罪恶感爆炸，因为这两个月来做的实质性东西基本没有，我已经大三了喂。</p>
-
+        <h1 id="什么是分布式服务"><a href="#什么是分布式服务" class="headerlink" title="什么是分布式服务"></a>什么是分布式服务</h1><p>分布式服务是一种技术架构，将相同数据或程序分散到多台服务器上，并且内部架构对外透明。对于分布式服务中的单台机器来说，<br>一般称之为节点（node)。NoSQL 服务在此应用尤其广泛。</p>
+<p>以 MongoDB 为例解释分布式：<br>若运行 Mongo 单例，仅由 mongod 一个主进程提供对外服务，在高并发的场景下，一旦进程挂了服务就处于完全瘫痪的状态中。<br>因此，MongoDB 强大的高可用特性–复制集，就是分布式服务的一种体现。<br><a id="more"></a><br>一个完整、规范的 MongoDB 复制集包含着 1 个 config 复制集、1 个 mongos 和至少 3 个或以上的奇数个 mongo 分片节点。<br>mongos 是路由节点，提供对外服务，是数据的进出口；config 储存着数据的分片配置信息。当请求到来时，mongos 会先去 config 查询到该条数据所在哪个分片节点，根据索引直接定位到 chunk。<br>分片节点中，会筛选有一个主节点，该主节点可设置为只写，副节点只读。副节点拉取主节点的 oplog（mongo记录的数据操作日志），与主节点进行增量同步，这就是“读写分离”。在网络畅通的条件下，各节点的数据可认为一致。</p>
+<p>为什么是奇数个分片节点？因为当主节点挂掉后，剩下的节点会自动选举出一个主节点，其余节点进行投票。若为偶数个，则可能出现投票数相同的情况，导致选举失败。也可单独设置一个仲裁节点。</p>
+<p>开发并不需要知道 mongo 存取数据时到底做了什么，TCP 连接 mongo 方式与单例无异。</p>
+<h1 id="分布式服务的优点"><a href="#分布式服务的优点" class="headerlink" title="分布式服务的优点"></a>分布式服务的优点</h1><p>为什么需要分布式？因为单机不可靠，即使单台机器 24h 内故障率仅是0.01%，那么 100 天后可能故障的理论机率是 1 %。这 1 %的故障机率，可能会给线上服务带来巨大的损失。</p>
+<h2 id="容灾能力“质”的飞跃"><a href="#容灾能力“质”的飞跃" class="headerlink" title="容灾能力“质”的飞跃"></a>容灾能力“质”的飞跃</h2><p>相对于单例服务来说，分布式服务显然会带来更高的容错性。对发生故障的节点摘除流量，或者自动切换节点，不会对线上业务造成很大的影响。</p>
+<h2 id="实现负载均衡"><a href="#实现负载均衡" class="headerlink" title="实现负载均衡"></a>实现负载均衡</h2><p>与分布式密切相关的是负载均衡，常用 Lvs、HAProxy 以及 Nginx 作为流量调度软件，主要实现网络流量最优调度，确保每一个节点发挥着应有的作用，减轻整个集群的负载压力，提高集群的并发能力。</p>
+<h2 id="可扩展"><a href="#可扩展" class="headerlink" title="可扩展"></a>可扩展</h2><p>当需要对服务性能提升时，堆机器是最直观的方法。</p>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1>
       
     </div>
 
@@ -462,11 +411,11 @@
   <ul class="post-copyright">
     <li class="post-copyright-author">
       <strong>本文作者：</strong>
-      Evan Koo
+      古毅
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://evankoo.obstacle.cn/越懒-罪恶感越强.html" title="越懒,罪恶感越强?">http://evankoo.obstacle.cn/越懒-罪恶感越强.html</a>
+      <a href="http://evankoo.obstacle.cn/我对分布式服务的理解.html" title="我对分布式服务的理解">http://evankoo.obstacle.cn/我对分布式服务的理解.html</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -489,18 +438,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/js中的const、var、let的区别.html" rel="next" title="js中的const、var、let的区别">
-                <i class="fa fa-chevron-left"></i> js中的const、var、let的区别
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Linux常用指令-二.html" rel="prev" title="Linux/Ubuntu常用指令(二)">
-                Linux/Ubuntu常用指令(二) <i class="fa fa-chevron-right"></i>
+              <a href="/c-socket-通讯的简单实现.html" rel="prev" title="c++ socket 通讯的简单实现">
+                c++ socket 通讯的简单实现 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -550,13 +495,22 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://image.obstacle.cn/1932806867.jpg"
-               alt="Evan Koo" />
-          <p class="site-author-name" itemprop="name">Evan Koo</p>
+               alt="古毅" />
+          <p class="site-author-name" itemprop="name">古毅</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
            
@@ -652,6 +606,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是分布式服务"><span class="nav-text">什么是分布式服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式服务的优点"><span class="nav-text">分布式服务的优点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#容灾能力“质”的飞跃"><span class="nav-text">容灾能力“质”的飞跃</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现负载均衡"><span class="nav-text">实现负载均衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可扩展"><span class="nav-text">可扩展</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#缺点"><span class="nav-text">缺点</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
     </div>
@@ -667,11 +637,11 @@
         <div class="copyright" >
   
   &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-hand-o-right"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Evan Koo</span>
+  <span class="author" itemprop="copyrightHolder">古毅</span>
   <a href="http://www.miitbeian.gov.cn/">粤ICP备17103321号-1</a>
 </div>
 
@@ -826,21 +796,6 @@
 
 
 
-
-  
-    <script type="text/javascript">
-    (function(){
-      var appid = 'cytdQFGsR';
-      var conf = '480e63e309e24b48debd8aba36ea8238';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
-        window.changyan.api.config({appid:appid,conf:conf})});
-      }
-    })();
-    </script>
-    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
-  
 
 
 

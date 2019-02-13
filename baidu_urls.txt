@@ -1,2 +1,2 @@
+http://evankoo.obstacle.cn/我对分布式服务的理解.html
 http://evankoo.obstacle.cn/c-socket-通讯的简单实现.html
-http://evankoo.obstacle.cn/nginx对惊群效应的处理方式.html
